@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C1D3523-FCF2-494C-A69A-68EF4F7A7C09}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yreal.Web</RootNamespace>
+    <AssemblyName>Yreal.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.0.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="SamuelControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SamuelControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Channel\Add.aspx" />
+    <Content Include="Channel\Ajax.aspx" />
+    <Content Include="Channel\ChannelMger.aspx" />
+    <Content Include="Channel\Update.aspx" />
+    <Content Include="common\Message.aspx" />
+    <Content Include="Content\Add.aspx" />
+    <Content Include="Content\Ajax.aspx" />
+    <Content Include="Content\ContentMger.aspx" />
+    <Content Include="Content\Update.aspx" />
+    <Content Include="Main.aspx" />
+    <Content Include="admin_top.aspx" />
+    <Content Include="css\admin\Cloud.base.css" />
+    <Content Include="css\admin\Cloud.comm.css" />
+    <Content Include="css\admin\Cloud.control.css" />
+    <Content Include="css\admin\comm.struct.css" />
+    <Content Include="css\admin\struct.service.css" />
+    <Content Include="css\jquery.autocomplete.css" />
+    <Content Include="css\jquery.combobox.css" />
+    <Content Include="css\jquery.thickbox.css" />
+    <Content Include="css\jquery.uploadify.css" />
+    <Content Include="css\jquery.webpart.css" />
+    <Content Include="UE\dialogs\emotion\emotion.css" />
+    <Content Include="UE\dialogs\emotion\emotion.js" />
+    <Content Include="UE\dialogs\emotion\images\0.gif" />
+    <Content Include="UE\dialogs\emotion\images\bface.gif" />
+    <Content Include="UE\dialogs\emotion\images\cface.gif" />
+    <Content Include="UE\dialogs\emotion\images\fface.gif" />
+    <Content Include="UE\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="UE\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="UE\dialogs\emotion\images\tface.gif" />
+    <Content Include="UE\dialogs\emotion\images\wface.gif" />
+    <Content Include="UE\dialogs\emotion\images\yface.gif" />
+    <Content Include="UE\dialogs\formula\formula.css" />
+    <Content Include="UE\dialogs\formula\formula.html" />
+    <Content Include="UE\dialogs\formula\formula.js" />
+    <Content Include="UE\dialogs\formula\images\formula.png" />
+    <Content Include="UE\dialogs\image\image.css" />
+    <Content Include="UE\dialogs\image\image.js" />
+    <Content Include="UE\dialogs\image\images\close.png" />
+    <Content Include="UE\dialogs\image\images\upload1.png" />
+    <Content Include="UE\dialogs\image\images\upload2.png" />
+    <Content Include="UE\dialogs\link\link.js" />
+    <Content Include="UE\dialogs\map\map.html" />
+    <Content Include="UE\dialogs\map\map.js" />
+    <Content Include="UE\dialogs\video\images\center_focus.jpg" />
+    <Content Include="UE\dialogs\video\images\left_focus.jpg" />
+    <Content Include="UE\dialogs\video\images\none_focus.jpg" />
+    <Content Include="UE\dialogs\video\images\right_focus.jpg" />
+    <Content Include="UE\dialogs\video\video.css" />
+    <Content Include="UE\dialogs\video\video.js" />
+    <Content Include="UE\index.html" />
+    <Content Include="UE\lang\en\en.js" />
+    <Content Include="UE\lang\en\images\addimage.png" />
+    <Content Include="UE\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="UE\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="UE\lang\en\images\background.png" />
+    <Content Include="UE\lang\en\images\button.png" />
+    <Content Include="UE\lang\en\images\copy.png" />
+    <Content Include="UE\lang\en\images\deletedisable.png" />
+    <Content Include="UE\lang\en\images\deleteenable.png" />
+    <Content Include="UE\lang\en\images\imglabel.png" />
+    <Content Include="UE\lang\en\images\listbackground.png" />
+    <Content Include="UE\lang\en\images\localimage.png" />
+    <Content Include="UE\lang\en\images\music.png" />
+    <Content Include="UE\lang\en\images\rotateleftdisable.png" />
+    <Content Include="UE\lang\en\images\rotateleftenable.png" />
+    <Content Include="UE\lang\en\images\rotaterightdisable.png" />
+    <Content Include="UE\lang\en\images\rotaterightenable.png" />
+    <Content Include="UE\lang\en\images\upload.png" />
+    <Content Include="UE\lang\zh-cn\images\copy.png" />
+    <Content Include="UE\lang\zh-cn\images\imglabel.png" />
+    <Content Include="UE\lang\zh-cn\images\localimage.png" />
+    <Content Include="UE\lang\zh-cn\images\music.png" />
+    <Content Include="UE\lang\zh-cn\images\upload.png" />
+    <Content Include="UE\lang\zh-cn\zh-cn.js" />
+    <Content Include="UE\themes\default\css\umeditor.css" />
+    <Content Include="UE\themes\default\css\umeditor.min.css" />
+    <Content Include="UE\themes\default\images\caret.png" />
+    <Content Include="UE\themes\default\images\close.png" />
+    <Content Include="UE\themes\default\images\icons.gif" />
+    <Content Include="UE\themes\default\images\icons.png" />
+    <Content Include="UE\themes\default\images\ok.gif" />
+    <Content Include="UE\themes\default\images\pop-bg.png" />
+    <Content Include="UE\themes\default\images\spacer.gif" />
+    <Content Include="UE\themes\default\images\videologo.gif" />
+    <Content Include="UE\third-party\jquery.min10.js" />
+    <Content Include="UE\third-party\mathquill\font\stixgeneral-bundle\STIXFontLicense2010.txt" />
+    <Content Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.svg" />
+    <Content Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.svg" />
+    <Content Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.svg" />
+    <Content Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.svg" />
+    <Content Include="UE\third-party\mathquill\font\Symbola.svg" />
+    <Content Include="UE\third-party\mathquill\mathquill.css" />
+    <Content Include="UE\third-party\mathquill\mathquill.js" />
+    <Content Include="UE\third-party\mathquill\mathquill.min.js" />
+    <Content Include="UE\umeditor.config.js" />
+    <Content Include="UE\umeditor.js" />
+    <Content Include="UE\umeditor.min.js" />
+    <Content Include="User\AddUser.aspx" />
+    <Content Include="images\!.gif" />
+    <Content Include="images\ad.gif" />
+    <Content Include="images\add.gif" />
+    <Content Include="images\back.gif" />
+    <Content Include="images\bg.gif" />
+    <Content Include="images\bigsize.jpg" />
+    <Content Include="images\bootnbg.jpg" />
+    <Content Include="images\bullet.gif" />
+    <Content Include="images\buttom-copy-bg.gif" />
+    <Content Include="images\buttom-left.gif" />
+    <Content Include="images\buttom-right.gif" />
+    <Content Include="images\buttom_bgs.gif" />
+    <Content Include="images\buttom_left2.gif" />
+    <Content Include="images\buttom_right2.gif" />
+    <Content Include="images\card.jpg" />
+    <Content Include="images\check-out_.gif" />
+    <Content Include="images\close.gif" />
+    <Content Include="images\content-bg-line.gif" />
+    <Content Include="images\content-bg.gif" />
+    <Content Include="images\database_import_.gif" />
+    <Content Include="images\DefaultDocs.gif" />
+    <Content Include="images\defind.gif" />
+    <Content Include="images\del.jpg" />
+    <Content Include="images\delete.gif" />
+    <Content Include="images\delete_6.gif" />
+    <Content Include="images\edit.gif" />
+    <Content Include="images\ershou_1.gif" />
+    <Content Include="images\ershou_2.gif" />
+    <Content Include="images\format.gif" />
+    <Content Include="images\fox.css" />
+    <Content Include="images\g.gif" />
+    <Content Include="images\gw.gif" />
+    <Content Include="images\gw2.gif" />
+    <Content Include="images\icon-demo.gif" />
+    <Content Include="images\icon-login-seaver.gif" />
+    <Content Include="images\icon-mail2.gif" />
+    <Content Include="images\icon-phone.gif" />
+    <Content Include="images\icon2_004.png" />
+    <Content Include="images\icon2_089.png" />
+    <Content Include="images\icon2_090.png" />
+    <Content Include="images\imagedelete.gif" />
+    <Content Include="images\imageedit.gif" />
+    <Content Include="images\image_%28add%296.gif" />
+    <Content Include="images\image_1.gif" />
+    <Content Include="images\ipsecurity.gif" />
+    <Content Include="images\l1b3.gif" />
+    <Content Include="images\l1b4.gif" />
+    <Content Include="images\l1b5.gif" />
+    <Content Include="images\left-bg.gif" />
+    <Content Include="images\left-top-right.gif" />
+    <Content Include="images\line2.jpg" />
+    <Content Include="images\linkspic3.gif" />
+    <Content Include="images\linkspic6.gif" />
+    <Content Include="images\lm.gif" />
+    <Content Include="images\lminfo.gif" />
+    <Content Include="images\login-buttom-bg.gif" />
+    <Content Include="images\login-content-bg.gif" />
+    <Content Include="images\login-top-bg.gif" />
+    <Content Include="images\login-wel.gif" />
+    <Content Include="images\login_bg.jpg" />
+    <Content Include="images\Login_but.gif" />
+    <Content Include="images\logo.gif" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\luck.gif" />
+    <Content Include="images\mail_leftbg.gif" />
+    <Content Include="images\mail_rightbg.gif" />
+    <Content Include="images\menu_bg.gif" />
+    <Content Include="images\menu_bg1.gif" />
+    <Content Include="images\menu_bg2.gif" />
+    <Content Include="images\menu_bgs.gif" />
+    <Content Include="images\menu_topimg.gif" />
+    <Content Include="images\menu_topline.gif" />
+    <Content Include="images\mime.gif" />
+    <Content Include="images\nav-right-bg.gif" />
+    <Content Include="images\news-title-bg.gif" />
+    <Content Include="images\ok.gif" />
+    <Content Include="images\OK.jpg" />
+    <Content Include="images\out.gif" />
+    <Content Include="images\password.gif" />
+    <Content Include="images\pic1.gif" />
+    <Content Include="images\pic10.gif" />
+    <Content Include="images\pic11.gif" />
+    <Content Include="images\pic12.gif" />
+    <Content Include="images\pic13.gif" />
+    <Content Include="images\pic14.gif" />
+    <Content Include="images\pic15.gif" />
+    <Content Include="images\pic16.gif" />
+    <Content Include="images\pic17.gif" />
+    <Content Include="images\pic18.gif" />
+    <Content Include="images\pic19.gif" />
+    <Content Include="images\pic21.gif" />
+    <Content Include="images\pic22.gif" />
+    <Content Include="images\pic23.gif" />
+    <Content Include="images\pic24.gif" />
+    <Content Include="images\pic25.gif" />
+    <Content Include="images\pic26.gif" />
+    <Content Include="images\pic5.gif" />
+    <Content Include="images\pic6.gif" />
+    <Content Include="images\pic7.gif" />
+    <Content Include="images\pic8.gif" />
+    <Content Include="images\pic9.gif" />
+    <Content Include="images\Redirects.gif" />
+    <Content Include="images\report2_%28add%29.gif" />
+    <Content Include="images\report2_%28delete%29.gif" />
+    <Content Include="images\right_smbg.jpg" />
+    <Content Include="images\servicezhgb2312.gif" />
+    <Content Include="images\set.gif" />
+    <Content Include="images\set2.gif" />
+    <Content Include="images\sitebackup.gif" />
+    <Content Include="images\skin.css" />
+    <Content Include="images\smallbg.jpg" />
+    <Content Include="images\st.gif" />
+    <Content Include="images\st.png" />
+    <Content Include="images\stop.gif" />
+    <Content Include="images\str.gif" />
+    <Content Include="images\Submit_bg.gif" />
+    <Content Include="images\t2bg1.gif" />
+    <Content Include="images\t2bg2.gif" />
+    <Content Include="images\t2bg4.gif" />
+    <Content Include="images\t2bg5.gif" />
+    <Content Include="images\title.gif" />
+    <Content Include="images\tj.jpg" />
+    <Content Include="images\to.gif" />
+    <Content Include="images\tool-down-pic.gif" />
+    <Content Include="images\top-right.gif" />
+    <Content Include="images\top_bt.jpg" />
+    <Content Include="images\ts.gif" />
+    <Content Include="images\user-info.gif" />
+    <Content Include="images\usercontrol.gif" />
+    <Content Include="images\vie.gif" />
+    <Content Include="images\X.gif" />
+    <Content Include="images\yc.gif" />
+    <Content Include="images\yx.gif" />
+    <Content Include="js\moo.fx.js" />
+    <Content Include="js\moo.fx.pack.js" />
+    <Content Include="js\prototype.lite.js" />
+    <Content Include="left.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="right.aspx" />
+    <Content Include="script\Admin.js" />
+    <Content Include="script\calendar\calendar.js" />
+    <Content Include="script\calendar\lang\en.js" />
+    <Content Include="script\calendar\lang\zh-cn.js" />
+    <Content Include="script\calendar\lang\zh-tw.js" />
+    <Content Include="script\calendar\skin\datePicker.gif" />
+    <Content Include="script\calendar\skin\default\datepicker.css" />
+    <Content Include="script\calendar\skin\default\img.gif" />
+    <Content Include="script\calendar\skin\WdatePicker.css" />
+    <Content Include="script\calendar\skin\whyGreen\bg.jpg" />
+    <Content Include="script\calendar\skin\whyGreen\datepicker.css" />
+    <Content Include="script\calendar\skin\whyGreen\img.gif" />
+    <Content Include="script\calendar\WdatePicker.js" />
+    <Content Include="script\Extend.js" />
+    <Content Include="script\global.js" />
+    <Content Include="script\jquery.autocomplete.min.js" />
+    <Content Include="script\jquery.backgroundPosition.js" />
+    <Content Include="script\jquery.combobox.js" />
+    <Content Include="script\jquery.contextmenu.js" />
+    <Content Include="script\jquery.dropdown.js" />
+    <Content Include="script\jquery.form.js" />
+    <Content Include="script\jquery.lazyload.js" />
+    <Content Include="script\jquery.min.js" />
+    <Content Include="script\jquery.thickbox.js" />
+    <Content Include="script\jquery.uploadify.min.js" />
+    <Content Include="script\jquery.webpart.js" />
+    <Content Include="User\Ajax.aspx" />
+    <Content Include="User\Detail.aspx" />
+    <Content Include="User\Update.aspx" />
+    <Content Include="User\Users.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Welcome\Default.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Channel\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Channel\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Channel\Ajax.aspx.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Channel\Ajax.aspx.designer.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Channel\ChannelMger.aspx.cs">
+      <DependentUpon>ChannelMger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Channel\ChannelMger.aspx.designer.cs">
+      <DependentUpon>ChannelMger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Channel\Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Channel\Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="common\Common.cs" />
+    <Compile Include="common\Message.aspx.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="common\Message.aspx.designer.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content.Master.cs">
+      <DependentUpon>Content.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content.Master.designer.cs">
+      <DependentUpon>Content.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Ajax.aspx.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\Ajax.aspx.designer.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ContentMger.aspx.cs">
+      <DependentUpon>ContentMger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\ContentMger.aspx.designer.cs">
+      <DependentUpon>ContentMger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_top.aspx.cs">
+      <DependentUpon>admin_top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_top.aspx.designer.cs">
+      <DependentUpon>admin_top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UE\net\Uploader.cs" />
+    <Compile Include="Uploade\getContent.ashx.cs">
+      <DependentUpon>getContent.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Uploade\imageUp.ashx.cs">
+      <DependentUpon>imageUp.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Uploade\Uploader.cs" />
+    <Compile Include="User\AddUser.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>AddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\AddUser.aspx.designer.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="left.aspx.cs">
+      <DependentUpon>left.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="left.aspx.designer.cs">
+      <DependentUpon>left.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="right.aspx.cs">
+      <DependentUpon>right.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="right.aspx.designer.cs">
+      <DependentUpon>right.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Ajax.aspx.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Ajax.aspx.designer.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Detail.aspx.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Detail.aspx.designer.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Welcome\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{9F2CC2A2-152C-41E6-BD5B-9E26FEF02873}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{437ACD68-0E8D-4C06-9B5E-C80387463BE9}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{B147673C-DB79-4BE9-A404-49B314E5D72C}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IModel\IModel.csproj">
+      <Project>{A0410BEC-F9E9-4CED-8653-447C4DF8B5D6}</Project>
+      <Name>IModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{068BAA51-640D-45F3-9523-F05F0EC175F0}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UE\net\getContent.ashx" />
+    <Content Include="UE\net\imageUp.ashx" />
+    <None Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.eot" />
+    <None Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.ttf" />
+    <None Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.woff" />
+    <None Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.eot" />
+    <None Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.ttf" />
+    <None Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.woff" />
+    <None Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.eot" />
+    <None Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.ttf" />
+    <None Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.woff" />
+    <None Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.eot" />
+    <None Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.ttf" />
+    <None Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.woff" />
+    <None Include="UE\third-party\mathquill\font\Symbola.eot" />
+    <None Include="UE\third-party\mathquill\font\Symbola.otf" />
+    <None Include="UE\third-party\mathquill\font\Symbola.ttf" />
+    <None Include="UE\third-party\mathquill\font\Symbola.woff" />
+    <Content Include="Uploade\imageUp.ashx" />
+    <Content Include="Uploade\getContent.ashx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2978</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

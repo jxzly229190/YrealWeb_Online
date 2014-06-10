@@ -1,0 +1,5 @@
+﻿.webpart{border:1px #666666 solid;}
+.webpart .part{ position:static; border:1px #95CBEE solid; margin:6px;padding:0px !important;}
+.webpart .dashblue{border:1px #79C0EF dashed; position:absolute;}
+.webpart .dashred{border:1px #FF0000 dashed;}
+.webpart .title{background-color:#C1DAEA !important; font-size:12px !important; text-align:left !important; padding:2px !important;line-height:14px !important;height:14px !important; color:#999999 !important; position:absolute;cursor:move;font-weight:normal !important;}

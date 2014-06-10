@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* --------------------------------------------客户服务------------------------------------ */
+.btnText{background:url(/images/admin/btn.gif) no-repeat;}
+.actionPanel .btnText{background-position:0 -59px; height:30px; width:155px;}
+.viewPage .btnText,.viewAction .btnText{background-position:-106px -31px; height:27px; width:80px; color:#333; line-height:27px;}
+.viewAction .btnYellow,.tbExtend .btnYellow{background-position:-252px 0; height:30px; width:65px; color:#fff;}
+.viewPage .btnText{ margin-top:0px;}
+.btnTextImg{ cursor:pointer; border:none;background:url(/images/admin/btn.gif) no-repeat;background-position:-106px -31px; height:27px; width:80px; color:#333; line-height:27px;}
+/* --------------------------------------------密码重置------------------------------------ */.actionPanel{text-align:left;}
+.selPanel{  border:1px solid #95BAEF; padding:2px 5px; background-color:#CBE5FC;}
+.selPanel li{ float:left; width:auto; margin:5px 20px 0 0;}
+.selPanel dt,.selPanel dd{float:left;}
+.selPanel dt{margin: 3px 8px 0 0;}
+.viewPage,.liBox{ width:50%;}
+.liBox li{ float:left; width:80px; margin-right:20px; text-align:left; line-height:25px;}
+.toolbar{height:40px;overflow:hidden;}
+.toolbar dd,.toolbar dt{float:left;height:25px;}
+.toolbar dd select{ margin-top:4px;}
+.toolbar dd label{line-height:28px;font-size:14px; +line-height:27px; _line-height:29px;}
+.toolbar dd input[type = "text"]{margin-top:1px\0;}
+.ui-paging{ float:right;}
+.viewPage{ width:100%; background:#F7F7F7; height:30px;}
+/* --------------------------------------------积分规则------------------------------------ */
+
+/* --------------------------------------------客户列表------------------------------------ */
+/* --------------------------------------------电子邮件------------------------------------ */
+/* --------------------------------------------手机短信------------------------------------ */
+/* --------------------------------------------咨询------------------------------------ */
+.group{ float:left; height:60px;}
+.group li{ float:left; width:100%; height:30px;}
+.group dt{ float:left;font-size:14px; +margin-top:-1px; _margin-top:0px;}
+.group dd{ float:left;}
+.group dd input[type = "text"]{ margin-top:1px\0;}
+.group dd input[type = "text"]{ margin-top:1px\0;}
+.group dd span {font-size:14px; vertical-align:top; display:inline-block; _margin-top:1px; margin-top:1px\0;}
+/* --------------------------------------------评论------------------------------------ */
+.crcf:link,.crcf:visited{ color:#F00; font-weight:bold; text-decoration:underline;}
+.tb-line-b{ border:1px solid #95BAEF;}
+.tb-line-b td{border:1px solid #95BAEF;}
+
+/* --------------------------------------------客户服务-咨询-switch_tab------------------------------------ */
+.switch_tab{ width:100%;float:left; cursor:pointer;}
+.switch_tab li{ float:left; font-weight:bold; margin-right:8px; text-align:center; line-height:26px;  width:82px; height:26px;}
+.switch_tab li a{ text-decoration:none;}
+.switch_tab_on{background-color: #27ADF4;background-image: -moz-linear-gradient(#51BFE6, #2297D4); color:#fff; border-top:#50bee5 1px solid;}
+.switch_tab_off{color:#ddd; border:1px solid #3694E0; border-bottom:none;}
+
+/*品牌列表*/
+.brandList li{ float:left; height:30px; width:120px; border:1px solid #CCC; line-height:30px; margin:10px; cursor:pointer;}
+.brandList input{ vertical-align:text-bottom; margin-left:10px;}
+.brandList li:hover{border:1px solid #2398d4;}
+
+.brandList_checked li{ float:left; height:30px; width:100px; border:1px solid #2398d4; padding-left:0px; line-height:30px; margin:10px; text-align:center;}

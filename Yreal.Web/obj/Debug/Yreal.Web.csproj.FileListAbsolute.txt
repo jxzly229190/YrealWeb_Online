@@ -1,0 +1,15 @@
+E:\SourceCode\YrealWeb\Yreal.Web\bin\Yreal.Web.dll
+E:\SourceCode\YrealWeb\Yreal.Web\bin\Yreal.Web.pdb
+E:\SourceCode\YrealWeb\Yreal.Web\obj\Debug\Yreal.Web.dll
+E:\SourceCode\YrealWeb\Yreal.Web\obj\Debug\Yreal.Web.pdb
+E:\SourceCode\YrealWeb\Yreal.Web\obj\Debug\Yreal.Web.csprojResolveAssemblyReference.cache
+E:\SourceCode\YrealWeb\Yreal.Web\bin\BLL.dll
+E:\SourceCode\YrealWeb\Yreal.Web\bin\Common.dll
+E:\SourceCode\YrealWeb\Yreal.Web\bin\DAL.dll
+E:\SourceCode\YrealWeb\Yreal.Web\bin\IModel.dll
+E:\SourceCode\YrealWeb\Yreal.Web\bin\Model.dll
+E:\SourceCode\YrealWeb\Yreal.Web\bin\BLL.pdb
+E:\SourceCode\YrealWeb\Yreal.Web\bin\Common.pdb
+E:\SourceCode\YrealWeb\Yreal.Web\bin\DAL.pdb
+E:\SourceCode\YrealWeb\Yreal.Web\bin\IModel.pdb
+E:\SourceCode\YrealWeb\Yreal.Web\bin\Model.pdb

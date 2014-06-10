@@ -1,0 +1,15 @@
+E:\SourceCode\YrealWeb\BLL\bin\Debug\BLL.dll
+E:\SourceCode\YrealWeb\BLL\bin\Debug\BLL.pdb
+E:\SourceCode\YrealWeb\BLL\obj\Debug\BLL.dll
+E:\SourceCode\YrealWeb\BLL\obj\Debug\BLL.pdb
+E:\SourceCode\YrealWeb\BLL\bin\Debug\Common.dll
+E:\SourceCode\YrealWeb\BLL\bin\Debug\DAL.dll
+E:\SourceCode\YrealWeb\BLL\bin\Debug\IModel.dll
+E:\SourceCode\YrealWeb\BLL\bin\Debug\AspNetPager.dll
+E:\SourceCode\YrealWeb\BLL\bin\Debug\SamuelControl.dll
+E:\SourceCode\YrealWeb\BLL\bin\Debug\Common.pdb
+E:\SourceCode\YrealWeb\BLL\bin\Debug\DAL.pdb
+E:\SourceCode\YrealWeb\BLL\bin\Debug\IModel.pdb
+E:\SourceCode\YrealWeb\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\SourceCode\YrealWeb\BLL\bin\Debug\Model.dll
+E:\SourceCode\YrealWeb\BLL\bin\Debug\Model.pdb

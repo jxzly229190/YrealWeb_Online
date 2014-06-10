@@ -1,0 +1,480 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>网页瀑布流布局浅析-前端工程师必学 - 行业新闻 - 网建公司网站模板</title>
+<meta name="keywords" content="网页，WEB，瀑布流，布局，浅析 - IT，互联网，技术，开发，新闻 - 网建公司网站模板">
+<meta name="description" content="如果你经常网上冲浪，这样参差不齐的多栏布局，是不是很眼熟啊？
+
+　　类似的布局，似乎一夜之间出现在国内外大大小小的网站上，比如视觉社交目录网站Pinterest(貌似是最早使用这种布局的网站了)，Mark之 ，蘑菇街，点点网，以及淘宝最新上线的" 哇哦"="" 等等。="" 　　这种布局适合于小数据块，每个数据块内容相近且没有侧重。通常，随着页面滚动条向下滚动，这种布局还会不断加载数据块并附加至当前尾部。所以，我们给这样的布局起了一个形象的名字="" -="" 瀑布流式布局。="" 企业建站系统行业新闻，稻壳cms官网www.doooc.com官方论坛www.doooc.net="" 网建公司网站模板"="">
+<meta name="author" content="企业网站模板网--www.950d.com QQ：5685200">
+<link href="%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9--%20%E8%A1%8C%E4%B8%9A%E6%96%B0%E9%97%BB%20-%20%E7%BD%91%E5%BB%BA%E5%85%AC%E5%8F%B8%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF_files/css.css" rel="stylesheet" type="text/css">
+<link href="%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9--%20%E8%A1%8C%E4%B8%9A%E6%96%B0%E9%97%BB%20-%20%E7%BD%91%E5%BB%BA%E5%85%AC%E5%8F%B8%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF_files/kf.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9--%20%E8%A1%8C%E4%B8%9A%E6%96%B0%E9%97%BB%20-%20%E7%BD%91%E5%BB%BA%E5%85%AC%E5%8F%B8%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF_files/jquery.js"></script>
+<script type="text/javascript" src="%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9--%20%E8%A1%8C%E4%B8%9A%E6%96%B0%E9%97%BB%20-%20%E7%BD%91%E5%BB%BA%E5%85%AC%E5%8F%B8%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF_files/functions.htm"></script>
+<script src="%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9--%20%E8%A1%8C%E4%B8%9A%E6%96%B0%E9%97%BB%20-%20%E7%BD%91%E5%BB%BA%E5%85%AC%E5%8F%B8%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF_files/share.js"></script><link href="%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9--%20%E8%A1%8C%E4%B8%9A%E6%96%B0%E9%97%BB%20-%20%E7%BD%91%E5%BB%BA%E5%85%AC%E5%8F%B8%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF_files/slide_share.css" rel="stylesheet"></head>
+<body>
+<div id="head">
+  <div class="wrapper"> <a href="http://v4.950d.com/" id="logo"><img src="%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9--%20%E8%A1%8C%E4%B8%9A%E6%96%B0%E9%97%BB%20-%20%E7%BD%91%E5%BB%BA%E5%85%AC%E5%8F%B8%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF_files/logo.gif" alt="网建公司网站模板"></a>
+    <ul id="nav">
+      <li><a href="http://v4.950d.com/">首页</a></li>
+      <li><a href="http://v4.950d.com/aboutus/">企业简介</a></li><li class="hover"><a href="http://v4.950d.com/news/">新闻资讯</a></li><li><a href="http://v4.950d.com/products/">案例展示</a></li><li><a href="http://v4.950d.com/design/">设计理念</a></li><li><a href="http://v4.950d.com/yewu/">业务范围</a></li><li><a href="http://v4.950d.com/guestbook/">在线留言</a></li><li><a href="http://v4.950d.com/contact/">联系我们</a></li>    </ul>
+    <div class="c"></div>
+  </div>
+</div>
+<div id="nbanner" class="wrapper"> <img src="%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9--%20%E8%A1%8C%E4%B8%9A%E6%96%B0%E9%97%BB%20-%20%E7%BD%91%E5%BB%BA%E5%85%AC%E5%8F%B8%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF_files/banner_2.jpg" height="290" width="1000"></div>
+<a name="content"></a>
+<div id="main" class="wrapper">
+  <div id="mainContent">
+    <dl id="cateContent">
+      <dt class="cateTitle">
+        <div id="position">当前位置：<a href="http://v4.950d.com/">首页</a> &gt; <a href="http://v4.950d.com/news/">新闻资讯</a> &gt; <a href="http://v4.950d.com/industrynews/">行业新闻</a></div>
+        <strong>行业新闻</strong></dt>
+      <dd class="cateContentHead"></dd>
+      <dd class="cateContent clearfix">
+        <style>
+/*======中间部分内======*/
+a{ text-decoration:none;}
+/*分页*/
+.endPageNum{ clear:both; font-size:12px; text-align:center;}
+.endPageNum table{ margin:auto;}
+.endPageNum .s1{width:52px;}
+.endPageNum .s2{background:#1f3a87; border:1px solid #ccc; color:#fff; font-weight:bold;}
+.endPageNum a.s2:visited {color:#fff;}
+.endPageNum a{padding:2px 5px;margin:5px 4px 0 0; color:#1F3A87;background:#fff; display:inline-table; border:1px solid #ccc; float:left;}
+.endPageNum a:visited{color:#1f3a87;} 
+.endPageNum a:hover{color:#fff; background:#1f3a87; border:1px solid #1f3a87;float:left; text-decoration:underline;}
+.endPageNum .s3{cursor:default;padding:2px 5px;margin:5px 4px 0 0; color:#ccc;background:#fff; display:inline-table; border:1px solid #ccc; float:left;}
+.clear{ clear:both;}
+.editor{ float:left; font-size:12px; margin:11px 0; width:545px; text-align:right;}
+#newscontent{ margin:0 auto; padding:10px;}
+#newsconttitle a:hover{ color:#04d;}
+#newsconttitle span{ float:left;}
+#newsconttitle h1{ font-size:14px; font-weight:bold; color:#666; padding:0; margin:0; text-align:center;}
+#newsconttitle p{ width:100%; height:20px; line-height:20px; float:left; padding:15px 0; margin:0; color:#666; border-bottom:1px #ddd solid; text-align:left;}
+#newsconttitle p a{ width:380px;height:20px; overflow:hidden; display:block; color:#1e6bc5;word-wrap: break-word;word-break: normal; float:left;}	
+#newsummary{margin: 10px 0px 0px;padding: 12px 5px 6px;width:98%; background:#FFF;border: 1px solid #DCDDDD; }
+#newsummary h2{text-indent: 2em;font-size: 14px;line-height: 20px;color:#666; font-weight:500;}
+#newcontent{ line-height:1.8; font-size:14px; color:#666; margin:10px 5px 0 5px; float:left; display:inline;}
+#newcontent p{ text-indent:24px; padding:0; margin:0;}
+#newcontent p a:hover{ color:#04d;}
+#newsleft .ad{ margin:10px 0; float:left;}
+#newsright{ float:left; width:350px; margin-left:10px; display:inline;}
+#articeBottom {font-size: 14px; margin: 6px 0 10px; padding-top: 10px; text-align: right; width: 97%;}
+#articeBottom span{ float:left;}
+#articeBottom span a{ font-size:12px;}
+#articeBottom span a:hover{ color:#0099FF;}
+#articleHeader { margin:5px 0; padding:10px;background:#F5F5F5;}
+#articleHeader h4{font-size:12px; color:#333; height:20px;}
+#articleHeader h4 a{ font-size:12px; color:#333}
+.details h2{ background:#F8F8FF; border: 1px solid #DDD; line-height: 25px; margin-bottom: 15px;  padding: 10px; font-size:12px; text-indent:24px; font-weight:normal;}
+</style>
+<div id="newscontent">
+	<div id="newsconttitle">
+		<h1>网页瀑布流布局浅析-前端工程师必学</h1>
+		<p><span style="float:right;">点击数：79</span><span>2012-10-25 16:15:25　来源：</span><a href="http://www.doooc.com/index/content/t-%E7%BD%91%E9%A1%B5%E7%80%91%E5%B8%83%E6%B5%81%E5%B8%83%E5%B1%80%E6%B5%85%E6%9E%90%7C%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%BF%85%E5%AD%A6-b-6-id-22.shtml">稻壳网</a></p>
+	</div>
+    <div class="clear"></div>
+    <div class="details"><h2>新闻摘要:如果你经常网上冲浪，这样参差不齐的多栏布局，是不是很眼熟啊？
+
+　　类似的布局，似乎一夜之间出现在国内外大大小小的网站上，比如视觉社交目录网站Pinterest(貌似是最早使用这种布局的网站了)，Mark之 ，蘑菇街，点点网，以及淘宝最新上线的"哇哦" 等等。
+
+　　这种布局适合于小数据块，每个数据块内容相近且没有侧重。通常，随着页面滚动条向下滚动，这种布局还会不断加载数据块并附加至当前尾部。所以，我们给这样的布局起了一个形象的名字 - 瀑布流式布局。</h2></div>	<div id="newcontent">
+		<p>
+	　　如果你经常网上冲浪，这样参差不齐的多栏布局，是不是很眼熟啊？
+</p>
+<p>
+	　　类似的布局，似乎一夜之间出现在国内外大大小小的网站上，比如视觉社交目录网站Pinterest(貌似是最早使用这种布局的网站了)，Mark之 ，蘑菇街，点点网，以及淘宝最新上线的"哇哦" 等等。
+</p>
+<p>
+	　　这种布局适合于小数据块，每个数据块内容相近且没有侧重。通常，随着页面滚动条向下滚动，这种布局还会不断加载数据块并附加至当前尾部。所以，我们给这样的布局起了一个形象的名字 - 瀑布流式布局。
+</p>
+<p>
+	　　<strong>1、视觉社交目录网站Pinterest 简介</strong> 
+</p>
+<p>
+	　　Pinterest是一个自称"个人版猎酷工具"的视觉社交目录网站，看起来像是一面虚拟的灵感墙，收藏丰富多元的设计、视觉艺术图片。以板 
+（Pinboards）做为单位，可以钉（pin）你喜爱的收藏，书签功能一键式抓取图片聚合到自己的Pinterest页面上。也可以follow不同
+人的品味，整体概念不错。目前网站收集的都是高品质照片。最赞页面底端自动加载无需翻页功能，让用户不断发现新图片。
+</p>
+<p>
+	　<strong>　2、几种实现方式</strong> 
+</p>
+<p>
+	　　随着越来越多设计师爱用这种布局，我们作为前端，要尽可能满足视觉/交互设计师的需求。所以，我们整理了下这种布局的几种实现方式，有三种:
+</p>
+<p>
+	　　1) 传统多列浮动。即 蘑菇街和哇哦 采用的方式，如下图所示:
+</p>
+<p style="text-align:center;">
+	<img src="%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9--%20%E8%A1%8C%E4%B8%9A%E6%96%B0%E9%97%BB%20-%20%E7%BD%91%E5%BB%BA%E5%85%AC%E5%8F%B8%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF_files/20121025085743_88857.png" alt=""> 
+</p>
+<p>
+	　　各列固定宽度，并且左浮动；
+</p>
+<p>
+	　　一列中的数据块为一组，列中的每个数据块依次排列即可；
+</p>
+<p>
+	　　更多数据加载时，需要分别插入到不同的列上；
+</p>
+<p>
+	　　线上例子 <a href="http://wow.taobao.com/"><span>（</span>http://wow.taobao.com/</a>）。
+</p>
+<p>
+	　　优点:
+</p>
+<p>
+	　　布局简单，应该说没啥特别的难点；
+</p>
+<p>
+	　　不用明确知道数据块高度，当数据块中有图片时，就不需要指定图片高度。
+</p>
+<p>
+	　　缺点:
+</p>
+<p>
+	　　列数固定，扩展不易，当浏览器窗口大小变化时，只能固定的x列，如果要添加一列，很难调整数据块的排列；
+</p>
+<p>
+	　　滚动加载更多数据时，还要指定插入到第几列中，还是不方便。
+</p>
+<p>
+	　　2) CSS3 定义。W3C 中有讲述关于多列布局的文档 <http: www.w3.org="" tr="" css3-multicol="">，排列出来的样子:</http:>
+</p>
+<p style="text-align:center;">
+	<img src="%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9--%20%E8%A1%8C%E4%B8%9A%E6%96%B0%E9%97%BB%20-%20%E7%BD%91%E5%BB%BA%E5%85%AC%E5%8F%B8%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF_files/20121025090730_23068.png" alt=""> 
+</p>
+<p>
+	　　由 chrome/ff 浏览器直接渲染出来，可以指定容器的列个数，列间距，列中间边框，列宽度来实现；
+</p>
+<p>
+	　　#container {
+</p>
+<p>
+	　　-webkit-column-count: 5；
+</p>
+<p>
+	　　/*-webkit-column-gap: 10px；
+</p>
+<p>
+	　　-webkit-column-rule: 5px solid #333；
+</p>
+<p>
+	　　-webkit-column-width: 210px；*/
+</p>
+<p>
+	　　-moz-column-count: 5；
+</p>
+<p>
+	　　/*-moz-column-gap: 20px；
+</p>
+<p>
+	　　-moz-column-rule: 5px solid #333；
+</p>
+<p>
+	　　-moz-column-width: 210px；*/
+</p>
+<p>
+	　　column-count: 5；
+</p>
+<p>
+	　　/*column-gap: 10px；
+</p>
+<p>
+	　　column-rule: 5px solid #333；
+</p>
+<p>
+	　　column-width: 210px；*/
+</p>
+<p>
+	　　}
+</p>
+<p>
+	　　column-count 为列数； column-gap 为每列间隔距离； column-rule 为间隔边线大小； 
+column-width 为每列宽度； 当只设置 column-width 时，浏览器窗口小于一列宽度时，列中内容自动隐藏； 当只设置 
+column-count 时，平均计算每列宽度，列内内容超出则隐藏； 都设了 column-count 和column-width，浏览器会根据
+ count 计算宽度和 width 比较，取大的那个值作为每列宽度，然后当窗口缩小时，width 
+的值为每列最小宽度。这边其实很简单，简易自己尝试下，详细可参考 
+https://developer.mozilla.org/en/CSS3_Columns 中的说明。
+</p>
+<p>
+	　　线上例子 <http: lizzie.github.com="" kissy="" src="" waterfall="" demo="" css3.html="">。</http:>
+</p>
+<p>
+	　　优点:
+</p>
+<p>
+	　　直接 CSS 定义，最方便了；
+</p>
+<p>
+	　　扩展方便，直接往容器里添加内容即可。
+</p>
+<p>
+	　　缺点:
+</p>
+<p>
+	　　只有高级浏览器中才能使用；
+</p>
+<p>
+	　　还有一个缺点，他的数据块排列是从上到下排列到一定高度后，再把剩余元素依次添加到下一列，这个本质上就不一样了；
+</p>
+<p>
+	　　鉴于这两个主要缺点，注定了该方法只能局限于高端浏览器，而且，更适合于文字多栏排列。
+</p>
+<p>
+	　　3) 绝对定位。即 Pinterest ，Mark之，KISSY 采用的方式:
+</p>
+<p style="text-align:center;">
+	<img src="%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9--%20%E8%A1%8C%E4%B8%9A%E6%96%B0%E9%97%BB%20-%20%E7%BD%91%E5%BB%BA%E5%85%AC%E5%8F%B8%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF_files/20121025090915_48713.png" alt=""> 
+</p>
+<p>
+	　　可谓是最优的一种方案，方便添加数据内容，窗口变化，列数/数据块都会自动调整；
+</p>
+<p>
+	　　线上例子 <http: docs.kissyui.com="" docs="" html="" static="" demo="" waterfall="" demo2.html="">。</http:>
+</p>
+<p>
+	　　缺点:
+</p>
+<p>
+	　　需要实现知道数据块高度，如果其中包含图片，需要知道图片高度；
+</p>
+<p>
+	　　JS 动态计算数据块位置，当窗口缩放频繁，可能会狂耗性能。
+</p>
+<p>
+	　<strong>　3、KISSY.Waterfall 实现思路</strong> 
+</p>
+<p>
+	　　KISSY 的 Waterfall 组件主要包含两个部分，一个是对现有数据块进行排列计算各自所在的位置； 二是下拉滚动时，触发加载数据操作，并把数据添加到目标容器中。
+</p>
+<p>
+	　　1) 数据块排列，算法步骤简述下:
+</p>
+<p>
+	　　初始化时，对容器中已有数据块元素进行第一次计算，需要用户给定: a，容器元素 - 以此获取容器总宽度； b，列宽度； c，最小列数； 最终列数取的是容器宽度/列宽度和最小列数的最大值，这样保证了，当窗口很小时，仍然出现最小列数的数据；
+</p>
+<p>
+	　　获得列数后，需要保存每个列的当前高度，这样在添加每个数据块时，才知道起始高度是多少；
+</p>
+<p>
+	　　依次取容器中的所有数据块，先寻找当前高度最小的某列，之后根据列序号，确定数据块的left，top值，left 为所在列的序号乘以列宽，top 为所在列的当前高度，最后更新所在列的当前高度加上这个数据块元素的高度，至此，插入一个元素结束；
+</p>
+<p>
+	　　当所有元素插入完毕后，调整容器的高度为各列最大的高度值，结束依次调整；
+</p>
+<p>
+	　　性能效率上的注意点: a，如果当前正在调整中，又触发了 resize 事件，需要将上次调整暂停后执行这次调整(见 timedChunk 
+函数)； b，resize 触发会很频繁，可以将回调函数缓存一段时候后执行，即当这段时间内多次触发了resize事件，但回调函数只会执行一次(见
+ S.buffer 函数)。
+</p>
+<p>
+	　　2) 异步加载数据，前面讲的是如何对容器中已有元素进行排列，但很多情况下，还需要不断加载新数据块，为此专门设计了一个独立的模块 KISSY.Waterfall.Loader，其实这个功能就更简单了，仅包含两个步骤:
+</p>
+<p>
+	　　绑定滚动事件，并确定预加载线高度值，即滚动到哪个高度后，需要去加载数据，其实这个就是列的最小高度值，这样当前滚动值和最小高度值比较一下即可判断出来，是否要触发加载数据；
+</p>
+<p>
+	
+　　加载数据，为了不对数据源做太多限制，完全由使用者自己决定数据源从哪边获取和其格式，这样更好的方便用户使用。为此，该组件只提供一个
+load(success，end) 接口，怎样load 由用户自己去定义，而其中的 
+success/end，分别给出如何添加新数据(suceess 即同 addItems)/如何停止加载的接口。
+</p>
+<p>
+	　<strong>　4、KISSY.Waterfall 示例和文档</strong> 
+</p>
+<p>
+	　　Waterfall API 文档 (<a href="http://docs.kissyui.com/docs/html/api/component/waterfall/">http://docs.kissyui.com/docs/html/api/component/waterfall/</a>)，相关构造器，配置项，方法都在这里；
+</p>
+<p>
+	　　示例 (<a href="http://docs.kissyui.com/docs/html/demo/component/waterfall/">http://docs.kissyui.com/docs/html/demo/component/waterfall/</a>)，包含静态和动态两种。
+</p>	</div>
+	<div class="endPageNum">
+		<table align="center">
+			<tbody><tr>
+				<td>
+								<div class="clear"></div>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+	<div id="articeBottom"><span>【责任编辑：<a href="#">稻壳网</a>】</span><a href="#">(Top) 返回页面顶端</a></div>
+</div>
+<div style="border:1px dashed #999999"></div>
+<div id="articleHeader">
+	<h4>上一篇：<a href="http://v4.950d.com/industrynews/n15.html">浅谈网页设计中的色彩理论</a> </h4>
+	</div>
+<div class="h10"></div>
+<div id="addlist" class="clearfix">
+<h2>相关文章</h2>
+<ul>
+<li><a href="http://v4.950d.com/industrynews/n16.html">网页瀑布流布局浅析-前端工程师必学</a></li><li><a href="http://v4.950d.com/industrynews/n15.html">浅谈网页设计中的色彩理论</a></li><li><a href="http://v4.950d.com/industrynews/n14.html">体验用户UI、UE，谈如何提高交互设计专业能力 </a></li><li><a href="http://v4.950d.com/industrynews/n13.html">企业对外服务窗口，稻壳网看新浪企业微博为人民和企业服务</a></li><li><a href="http://v4.950d.com/industrynews/n11.html">如何提高网页速度优化 提高用户体验</a></li><li><a href="http://v4.950d.com/industrynews/n10.html">稻壳网谈网站策划重点和行业知识梳理</a></li><li><a href="http://v4.950d.com/industrynews/n9.html">稻壳网浅谈WEB前端 如何成为一名优异的web前端工程师</a></li><li><a href="http://v4.950d.com/industrynews/n7.html">企业网站与电子商务网站购买欲望和购买目标</a></li><li><a href="http://v4.950d.com/companynews/n6.html">DocCms 官方微博正式开放，欢迎广大用户关注！</a></li><li><a href="http://v4.950d.com/companynews/n5.html">DocCms官方网站与官方论坛将于2012.11.01日正式推出！</a></li></ul>
+</div>
+<div class="h10"></div>
+      </dd>
+      <dd class="cateContentFooter"></dd>
+    </dl>
+  </div>
+  <div style="position: fixed; top: 0px; left: 173.5px; z-index: 1;" id="sidebar">
+    <dl class="mod">
+      <dt>新闻资讯</dt>
+      <dd>
+        <ul>
+          <li><a href="http://v4.950d.com/companynews/">企业动态</a></li><li class="hover"><a href="http://v4.950d.com/industrynews/">行业新闻</a></li>        </ul>
+      </dd>
+      <dd class="footer"></dd>
+    </dl>
+  </div>
+  <script type="text/javascript">
+		var navElm = '#sidebar';
+		var _defautlTop = $(navElm).offset().top;
+		var _position = $(navElm).css('position');
+		var _top = $(navElm).css('top');
+		var _left = $(navElm).css('left');
+		var _zIndex = $(navElm).css('z-index');
+		$(window).scroll(function(){
+			var _defautlLeft = $(navElm).offset().left;
+			if($(this).scrollTop() > _defautlTop){
+			if($.browser.msie && $.browser.version=="6.0"){
+			$(navElm).css({'position':'absolute','top':eval(document.documentElement.scrollTop),'left':_defautlLeft,'z-index':99999});
+				//$("html,body").css({'background-image':'url(other/.com/about:blank)','background-attachment':'fixed'});
+			}else{
+				$(navElm).css({'position':'fixed','top':0,'left':_defautlLeft,'z-index':1});
+			}
+			}else{
+				$(navElm).css({'position':_position,'top':_top,'left':_left,'z-index':_zIndex});
+			}
+		});
+	</script>
+  <div class="c"></div>
+</div>
+<div id="footer">
+  <div class="wrapper">
+    <div id="navBottom"><a href="http://v4.950d.com/">首页</a> | <a href="http://v4.950d.com/aboutus/">企业简介</a> | <a href="http://v4.950d.com/news/">新闻资讯</a> | <a href="http://v4.950d.com/products/">案例展示</a> | <a href="http://v4.950d.com/design/">设计理念</a> | <a href="http://v4.950d.com/yewu/">业务范围</a> | <a href="http://v4.950d.com/guestbook/">在线留言</a> | <a href="http://v4.950d.com/contact/">联系我们</a></div>
+    <div class="contact"> <img src="%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9--%20%E8%A1%8C%E4%B8%9A%E6%96%B0%E9%97%BB%20-%20%E7%BD%91%E5%BB%BA%E5%85%AC%E5%8F%B8%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF_files/hotLine.gif">
+      <div class="content"> 版权所有：雅风网页设计工作室<br>
+        地址：辽宁省鞍山市铁东区胜利路1号<br>
+        电话：13889709992<br>
+        邮箱：eaom@163.com<br>
+        投诉与建议：13889709992<br>
+        客服QQ：5685200 </div>
+    </div>
+    <div id="mapBtn"><img src="%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9--%20%E8%A1%8C%E4%B8%9A%E6%96%B0%E9%97%BB%20-%20%E7%BD%91%E5%BB%BA%E5%85%AC%E5%8F%B8%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF_files/temp_0003.gif"> </div>
+    <div class="snsAndCopyright">
+      <div class="snsBtn"> <a href="#" target="_blank" class="snsBtn1">百度</a> <a href="http://weibo.com/yophoo" target="_blank" class="snsBtn2">新浪</a> <a href="http://t.qq.com/yophoo" target="_blank" class="snsBtn3">腾讯微博</a> <a href="#" target="_blank" class="snsBtn4">网易</a> <a href="#" target="_blank" class="snsBtn5">人人</a> <a href="#" target="_blank" class="snsBtn6">QQ空间</a> 
+        
+         
+      </div>
+      <div class="c"></div>
+      <div id="copyright">版权所有 © 2006-2014 雅风设计 辽ICP备0808008号 </div>
+    </div>
+    <div id="qrCode"> <img src="%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9--%20%E8%A1%8C%E4%B8%9A%E6%96%B0%E9%97%BB%20-%20%E7%BD%91%E5%BB%BA%E5%85%AC%E5%8F%B8%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF_files/temp_0004.gif" title="手机访问可以从这里进入！" height="100" width="100"> </div>
+  </div>
+  <script type="text/javascript">
+		$(function(){
+			$('#footer .corner').click(function(){
+				$('#footer').hide(0);
+			});
+			$('a,input[type="button"],input[type="submit"]').bind('focus',function(){
+				if(this.blur){
+					this.blur();
+				};
+			});
+			$('#qrCode img').hover(function(){
+				$(this).stop().animate({width:'280px',height:'280px',left:'-120px',top:'-131px'},'fast',function(){
+					$('#footer .corner').css('display','none'); // 这个无辜，就是影响了些二维码的形象
+				});
+			},function(){
+				$('#footer .corner').css('display','block');
+				$(this).animate({width:'100px',height:'100px',left:'15px',top:'15px'},'fast');
+			});
+			// 底部的地图
+			$('#mapBtn img').click(function(){
+				$('#map').fadeIn();
+			});
+			$('#map a').click(function(){
+				$('#map').fadeOut();
+			});
+		});
+	</script>
+  <link href="%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9--%20%E8%A1%8C%E4%B8%9A%E6%96%B0%E9%97%BB%20-%20%E7%BD%91%E5%BB%BA%E5%85%AC%E5%8F%B8%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF_files/backtop.css" type="text/css" rel="stylesheet" charset="utf-8">
+  <p style="display: block;" id="backTop"> <a href="#top" title="点击返回顶部"><span></span></a> </p>
+  <script>
+		$(function(){
+			$("#backTop").hide();
+			$(function () {
+				$(window).scroll(function () {
+					if ($(this).scrollTop() > 100) {
+						$("#backTop").fadeIn();
+					} else {
+						$("#backTop").fadeOut();
+					}
+				});
+				$("#backTop a").click(function () {
+					$("body,html").animate({
+						scrollTop: 0
+					}, 200);
+					return false;
+				});
+			});
+		});
+		</script> 
+</div>
+
+<!-- 客服 --> 
+
+<!-- Baidu Button BEGIN --> 
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"2","bdPos":"left","bdTop":"202"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=86326610.js?cdnversion='+~(-new Date()/36e5)];</script> 
+<!-- Baidu Button END --> 
+
+<div id="box-kefu">
+  <div class="kefu-close"></div>
+  <div class="kefu-open">
+    <div>
+      <ul>
+        <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=5685200&amp;site=qq&amp;menu=yes"><i class="qq"></i>售前咨询</a></li>
+        <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=5685200&amp;site=qq&amp;menu=yes"><i class="qq"></i>售后服务</a></li>
+        <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=5685200&amp;site=qq&amp;menu=yes"><i class="qq"></i>模板定制</a></li>
+        <li><a href="http://v4.950d.com/contact/"><i class="txt"></i>联系方式</a></li>
+        <li id="tel">TEL:13889709992</li>
+      </ul>
+    </div>
+    <a href="javascript:;" class="close">关闭</a> </div>
+</div>
+<script>var online= new Array();</script> 
+<script src="%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9--%20%E8%A1%8C%E4%B8%9A%E6%96%B0%E9%97%BB%20-%20%E7%BD%91%E5%BB%BA%E5%85%AC%E5%8F%B8%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF_files/getonline.htm"></script> 
+<script>
+(function($){
+    for (var i=0; i<online.length; i++) {
+        if (online[i]) jQuery("#box-kefu .qq").eq(i).addClass("online");
+    }
+    var _open = $("#box-kefu").find(".kefu-open"),
+        _close = $("#box-kefu").find(".kefu-close");
+    _open.find("a").hover(function(){
+        $(this).stop(true,true).animate({paddingLeft:20},200).find("i").stop(true,true).animate({left:75},200);
+    },function(){
+        $(this).stop(true,true).animate({paddingLeft:35},200).find("i").stop(true,true).animate({left:10},200);
+    });
+    
+
+    _open.find(".close").click(function(){
+        _open.animate({width:148},200,function(){
+            _open.animate({width:0},200,function(){
+                _close.animate({width:34},200);
+
+            });
+        });
+    });
+    _close.click(function(){
+        _close.animate({width:44},200,function(){
+            _close.animate({width:0},200,function(){
+                _open.animate({width:138},200);
+            });
+        });
+    });
+})(jQuery)
+</script> 
+
+
+<div data-bd-bind="1401886667019" class="bdshare-slide-button-box bdshare-slide-style-l2" style="top: 202px; width: 0px; left: 0px;"><a style="right: -24px;" href="#" onclick="return false;" class="bdshare-slide-button"></a><div style="width: 0px; display: none;" class="bdshare-slide-list-box"><div class="bdshare-slide-top">分享到</div><div class="bdshare-slide-list"><ul style="width: 226px;" class="bdshare-slide-list-ul"></ul></div><div style="width: 226px;" class="bdshare-slide-bottom"><a href="#" onclick="return false;" class="slide-more" data-cmd="more">更多...</a></div></div></div></body></html>
+<!--本网站由稻壳企业建站系统生成 Power by DocCms x1.0&DoooC.com -->

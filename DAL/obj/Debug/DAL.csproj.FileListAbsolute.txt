@@ -1,0 +1,11 @@
+E:\SourceCode\YrealWeb\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\SourceCode\YrealWeb\DAL\bin\Debug\DAL.dll
+E:\SourceCode\YrealWeb\DAL\bin\Debug\DAL.pdb
+E:\SourceCode\YrealWeb\DAL\bin\Debug\Common.dll
+E:\SourceCode\YrealWeb\DAL\bin\Debug\IModel.dll
+E:\SourceCode\YrealWeb\DAL\bin\Debug\AspNetPager.dll
+E:\SourceCode\YrealWeb\DAL\bin\Debug\SamuelControl.dll
+E:\SourceCode\YrealWeb\DAL\bin\Debug\Common.pdb
+E:\SourceCode\YrealWeb\DAL\bin\Debug\IModel.pdb
+E:\SourceCode\YrealWeb\DAL\obj\Debug\DAL.dll
+E:\SourceCode\YrealWeb\DAL\obj\Debug\DAL.pdb

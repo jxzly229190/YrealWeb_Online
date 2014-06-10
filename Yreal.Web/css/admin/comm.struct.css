@@ -1,0 +1,60 @@
+@charset "utf-8";
+html{height:100%;}
+body{height:100%; background-color:#EBF4FF;}
+/* 头部 */
+.header{height:80px;width:100%;background-color:#DDE9F9;position:relative;border-bottom:6px solid #1E80EF;background:url(/images/admin/logo.jpg) no-repeat;}
+.header .logo{ width:151px; height:80px; position:absolute; top:30px; left:10px; cursor:pointer;}
+	/*mini导航*/
+	.miniNav{ background: url(/images/admin/bg_mini.gif) no-repeat right 0 ;height: 25px;position: absolute;right: 10px;top: 0;}
+		.miniNav ul{background:url(/images/admin/bg_mini.gif) no-repeat -324px -25px;color:#ACACAC;float:left;height:26px;line-height:26px;padding:0 5px;position:relative;z-index:1;}
+		.miniNav li{background:url(/images/admin/bg_mini.gif) no-repeat  0 -25px ;float:left;height:26px;padding:0 8px;}
+		.miniNav .start{background: none repeat;}
+	/* 头部导航 */
+	.nav{float:left;top:54px; height:26px;overflow:hidden; left:95px; position:absolute;}
+		.nav a{background:url(/images/admin/nav_bg_inactive2.png) no-repeat;width:82px;height:26px;display:inline-block;text-align:center;float:left;margin:0 2px;line-height:30px;overflow:hidden;}
+		.nav .on{background:url(/images/admin/nav_bg_inactive3.png) no-repeat; color:#FFF;}
+/*状态栏*/
+.statusLine{width:100%;height:30px;border-bottom:1px solid #ccc;}
+.statusLine .linear_fe_f2{height:30px; line-height:30px;overflow:hidden;}
+	.loginInfo{width:auto;margin-left:10px;background:url(/images/admin/clock.gif) 0 5px no-repeat;padding-left:20px;}
+	.operate{width:auto;display:inline;margin-right:10px;}
+/* 主体面板 */
+.wrapper{height:100%;background:url(/images/admin/bg_lefter.jpg) 150px 0 repeat-y;}
+	.container{width:100%;margin-left:-160px;background:url(/images/admin/bg_lefter.jpg) 150px 0 repeat-y;}
+		/* 内容区域 */
+		.content{margin-left:160px;}
+			/* 内容导航 */
+			.crumb{width:100%; background-color:#D0E1F5;border-bottom:1px solid #95BAEF;}
+				.crumb div{padding:0px 10px; height:30px; line-height:30px; overflow:hidden;}
+			/* 内容标题 */
+			.title{overflow: hidden;height: 0px;line-height: 34px;}
+				.title h2 {color: #333;padding-left: 15px;float: left; font-size: 14px; width: 122px;}
+			/* 主体内容 */
+			.conMain{padding:15px;background-color:#EBF4FF;}
+			  	/*带边框的面板*/
+				.linePanel{border:1px solid #8EB3DE;padding:10px 15px; overflow:hidden; background: #DDEDFF url(../image/c-bg.jpg) repeat-x;}
+				.grading{ border:0px solid #2398d4; margin-bottom:2px; cursor:pointer;}
+				.grading_title{ height:24px; background:#FFF; line-height:24px; font-weight:bold; padding-left:10px;background-color: #27ADF4;background-image: -moz-linear-gradient(#51BFE6, #2297D4);border: 1px solid #2398D4;color: #FFFFFF;}
+				.grading li{ padding-left:30px; line-height:24px;}
+				.grading ul{display:none;}
+				.grading input{ vertical-align:text-bottom; margin-right:5px;}
+				.child2 dd{ height:24px; line-height:24px; padding-left:30px;}
+				/*操作面板*/
+				.actionPanel{ margin:15px 0; text-align:center;}
+				/*展示面板*/
+				.showPanel{}
+				.attrListMain{width:1200px;}
+				.child{width:250px;margin:6px;float:left;border:2px solid #95BAEF;height:40px;line-height:40px;font-size:18px;color:#000000;vertical-align:middle;text-align:center;cursor: pointer;}
+				/*视图操作*/
+				.viewAction{ margin:15px 0; /*line-height:40px;*/}
+				/*视图数据*/
+				.viewList{}
+				/*视图分页*/
+				.viewPage{}
+	/* 侧边栏 */
+	.sidebar{width:150px;/*width:160px;*/ background-color:#D0E1F5; heigtht:100%; }
+		/* 菜单 */
+		.menu{width:150px;/*width:160px;*/}
+			.menu a{display:block;width:150px;text-align:left;background:url(/images/admin/li.jpg) 15% 7px no-repeat;height:30px;border-bottom:1px solid #6AACDA;text-indent:3.5em;line-height:30px;overflow:hidden;}
+			 #menuList .curr{background-color:#EEEBD4;font-weight:bold; color:#EE7105;}		
+	.roller{background:url(/images/admin/bg_topframe.gif) no-repeat scroll -15px -73px transparent; cursor: pointer;height: 20px;position: absolute;left: 150px;top: 300px;width: 10px;}	

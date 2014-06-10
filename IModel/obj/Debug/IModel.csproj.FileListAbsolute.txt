@@ -1,0 +1,8 @@
+F:\V4_New\branches\v4.gjw.com_Integral\IModel\bin\Debug\IModel.dll
+F:\V4_New\branches\v4.gjw.com_Integral\IModel\bin\Debug\IModel.pdb
+F:\V4_New\branches\v4.gjw.com_Integral\IModel\obj\Debug\IModel.dll
+F:\V4_New\branches\v4.gjw.com_Integral\IModel\obj\Debug\IModel.pdb
+E:\SourceCode\YrealWeb\IModel\obj\Debug\IModel.dll
+E:\SourceCode\YrealWeb\IModel\obj\Debug\IModel.pdb
+E:\SourceCode\YrealWeb\IModel\bin\Debug\IModel.dll
+E:\SourceCode\YrealWeb\IModel\bin\Debug\IModel.pdb
