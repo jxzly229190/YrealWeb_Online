@@ -19,3 +19,10 @@ E:\SourceCode\YrealWeb\Common\bin\Debug\Common.dll
 E:\SourceCode\YrealWeb\Common\bin\Debug\Common.pdb
 E:\SourceCode\YrealWeb\Common\bin\Debug\IModel.dll
 E:\SourceCode\YrealWeb\Common\bin\Debug\IModel.pdb
+E:\SourceCode\YrealWeb_Online\Common\bin\Debug\Common.dll
+E:\SourceCode\YrealWeb_Online\Common\bin\Debug\Common.pdb
+E:\SourceCode\YrealWeb_Online\Common\bin\Debug\IModel.dll
+E:\SourceCode\YrealWeb_Online\Common\bin\Debug\IModel.pdb
+E:\SourceCode\YrealWeb_Online\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\SourceCode\YrealWeb_Online\Common\obj\Debug\Common.dll
+E:\SourceCode\YrealWeb_Online\Common\obj\Debug\Common.pdb

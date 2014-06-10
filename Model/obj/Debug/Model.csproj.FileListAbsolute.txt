@@ -5,3 +5,10 @@ E:\SourceCode\YrealWeb\Model\bin\Debug\IModel.dll
 E:\SourceCode\YrealWeb\Model\bin\Debug\IModel.pdb
 E:\SourceCode\YrealWeb\Model\obj\Debug\Model.dll
 E:\SourceCode\YrealWeb\Model\obj\Debug\Model.pdb
+E:\SourceCode\YrealWeb_Online\Model\bin\Debug\Model.dll
+E:\SourceCode\YrealWeb_Online\Model\bin\Debug\Model.pdb
+E:\SourceCode\YrealWeb_Online\Model\bin\Debug\IModel.dll
+E:\SourceCode\YrealWeb_Online\Model\bin\Debug\IModel.pdb
+E:\SourceCode\YrealWeb_Online\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\SourceCode\YrealWeb_Online\Model\obj\Debug\Model.dll
+E:\SourceCode\YrealWeb_Online\Model\obj\Debug\Model.pdb

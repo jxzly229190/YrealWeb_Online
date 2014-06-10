@@ -1,4 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="Yreal.Web.Channel.Add" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceTitle" runat="server">
+    新增栏目
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server" action="Add.aspx" method="post">
         <div class="linePanel">

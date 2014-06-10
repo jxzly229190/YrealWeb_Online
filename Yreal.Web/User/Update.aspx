@@ -1,10 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="Update.aspx.cs" Inherits="Yreal.Web.User.Update" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceTitle" runat="server">
+    修改用户
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <form id="form1" runat="server" action="Update.aspx" method="post">
         <div class="linePanel">
             <input type="hidden" value="<%=id %>" name="id"/>
 		        <div class="viewAction">
-                    <input class="btnText" href="userList.htm" value="列表" type="button">
+                    <input class="btnText" id="btnBack" href="/Users.aspx" value="列表" onclick="window.location='/User/Users.aspx';" type="button">
 		        </div>
                 <table class="tbExtend tb-line bgcw lineHeigth30 top15 bottom15 p5">
                     <tbody>

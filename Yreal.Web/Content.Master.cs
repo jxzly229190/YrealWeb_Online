@@ -11,7 +11,10 @@ namespace Yreal.Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Session["LoginAdmin"]==null)
+            {
+                Response.Write("<script language='javascript'>alert('对不起，登录状态过期，请重新登录。');parent.window.location='/login.aspx';</script>");
+            }
         }
     }
 }

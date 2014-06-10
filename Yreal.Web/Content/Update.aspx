@@ -1,4 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="Update.aspx.cs" Inherits="Yreal.Web.Content.Update" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceTitle" runat="server">
+    修改内容
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <link href="/UE/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="/UE/third-party/jquery.min10.js"></script>
@@ -27,7 +30,14 @@
                     </tr>
                     <tr  width="8%">
                         <td align="right">封面图片：</td>
-                        <td  width="92%"><input name="txtImage" class="input200" id="txtImage" maxlength="20" type="text" value="<%=Content.ImageUrls %>"/></td>
+                        <td  width="92%"><tr  width="8%">
+                    <td align="right">封面图片：</td>
+                    <td  width="92%">
+                        <input type="hidden" id="txtImage"/>
+                        <iframe width="500" id="iframepage" height="50" frameborder="no" border="0" marginwidth="0" marginheight="0" src="imageUpload.aspx" onload="iFrameHeight()"></iframe>
+                        <input type="button" onclick="$('#iframepage').attr('src','imageUpload.aspx')" value="删除"/>
+                    </td>
+                </tr></td>
                     </tr>
                     <tr>
                         <td align="right">内容：</td>
@@ -65,6 +75,14 @@
         </div>
 </form>
 <script type="text/javascript">
+    function iFrameHeight() {
+        var ifm = document.getElementById("iframepage");
+        var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
+        if (ifm != null && subWeb != null) {
+            ifm.height = subWeb.body.scrollHeight;
+        }
+    }
+
     $(function () {
         var ue = UM.getEditor('container').setContent(unescape('<%= Content.ContentText %>'));
         $("#recommend").val('<%= Content.Attributes %>');
@@ -75,6 +93,7 @@
         }
         
         $("#btnSubmit").click(function () {
+            var image = document.getElementById('iframepage').contentDocument.getElementById("imageUrl");
             var title = $("#txtTitle").val();
             var channel = $("#ctl00_ContentPlaceHolder1_ddlChannel").val();
             var content = UM.getEditor('container').getContent();
@@ -104,7 +123,7 @@
                     "channel": channel,
                     "content": escape(content),
                     "recommend": $("#recommend").val(),
-                    "image": $("#txtImage").val(),
+                    "image": $(image).attr("src"),
                     "remark": $("#txtRemark").val()
                 },
                 success: function (data) {
@@ -128,9 +147,10 @@
             }
 
             if ($(this).children('option:selected').attr("contentType") == "1") {
-                $("#txtImage").attr("disabled", true);
+                
+                $("#iframepage").removeAttr("src");
             } else {
-                $("#txtImage").removeAttr("disabled", true);
+                $("#iframepage").attr("src", 'imageUpload.aspx');
             }
         });
     });

@@ -1,8 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="Detail.aspx.cs" Inherits="Yreal.Web.User.Detail" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceTitle" runat="server">
+    用户详情
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="linePanel">
 		        <div class="viewAction">
-                    <input class="btnText" href="userList.htm" value="列表" type="button">
+                    <input class="btnText" id="btnBack" href="/Users.aspx" value="列表" onclick="window.location='/User/Users.aspx';" type="button">
 		        </div>
                 <table class="tbExtend tb-line bgcw lineHeigth30 top15 bottom15 p5">
                     <tbody>

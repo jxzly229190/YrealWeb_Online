@@ -6,3 +6,7 @@ E:\SourceCode\YrealWeb\IModel\obj\Debug\IModel.dll
 E:\SourceCode\YrealWeb\IModel\obj\Debug\IModel.pdb
 E:\SourceCode\YrealWeb\IModel\bin\Debug\IModel.dll
 E:\SourceCode\YrealWeb\IModel\bin\Debug\IModel.pdb
+E:\SourceCode\YrealWeb_Online\IModel\bin\Debug\IModel.dll
+E:\SourceCode\YrealWeb_Online\IModel\bin\Debug\IModel.pdb
+E:\SourceCode\YrealWeb_Online\IModel\obj\Debug\IModel.dll
+E:\SourceCode\YrealWeb_Online\IModel\obj\Debug\IModel.pdb

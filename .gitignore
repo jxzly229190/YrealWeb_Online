@@ -34,3 +34,17 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+*.dll
+
+# Customized
+*.crc
+_ReSharper.YrealWeb/*
+Yreal.Web/Uploade/*
+*.cache
+*.cache
+*.version
+DAL/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+_ReSharper.YrealWeb/BuildScriptCache/.version
+*.version
+*.cache

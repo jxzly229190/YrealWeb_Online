@@ -67,6 +67,8 @@
     <Content Include="Content\Add.aspx" />
     <Content Include="Content\Ajax.aspx" />
     <Content Include="Content\ContentMger.aspx" />
+    <Content Include="Content\imageUpload.aspx" />
+    <Content Include="Content\imageUpSuccess.aspx" />
     <Content Include="Content\Update.aspx" />
     <Content Include="Main.aspx" />
     <Content Include="admin_top.aspx" />
@@ -400,6 +402,20 @@
     </Compile>
     <Compile Include="Content\ContentMger.aspx.designer.cs">
       <DependentUpon>ContentMger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\imageUpload.aspx.cs">
+      <DependentUpon>imageUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\imageUpload.aspx.designer.cs">
+      <DependentUpon>imageUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\imageUpSuccess.aspx.cs">
+      <DependentUpon>imageUpSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\imageUpSuccess.aspx.designer.cs">
+      <DependentUpon>imageUpSuccess.aspx</DependentUpon>
     </Compile>
     <Compile Include="Content\Update.aspx.cs">
       <DependentUpon>Update.aspx</DependentUpon>

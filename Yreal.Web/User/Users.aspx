@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="Yreal.Web.Users" %>
 <%@ Register TagPrefix="asp" Namespace="Wuqi.Webdiyer" Assembly="AspNetPager, Version=7.0.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceTitle" runat="server">
+    用户管理
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <form id="Form1" action="" runat="server">
     <div class="linePanel">

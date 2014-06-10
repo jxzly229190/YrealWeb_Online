@@ -1,4 +1,7 @@
 <%@ Page Title="" Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="AddUser.aspx.cs" Inherits="Yreal.Web.AddUser" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceTitle" runat="server">
+    新增用户
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server" action="AddUser.aspx" method="post">
         <div class="linePanel">
