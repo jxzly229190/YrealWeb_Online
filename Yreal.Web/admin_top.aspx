@@ -5,11 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title> - 管理页面</title>
+    <script src="UE/third-party/jquery.min10.js" type="text/javascript"></script>
 <script language=JavaScript>
     function logout() {
-        if (confirm("您确定要退出控制面板吗？"))
-            top.location = "login.aspx";
-        return false;
+        if (confirm("您确定要退出控制面板吗？")) {
+            jQuery.post("/User/Ajax.aspx", { "act": "out" }, function() {
+                alert('成功退出。');
+                top.location = "login.aspx";
+            }, "text");
+        }
     }
 </script>
 <script language=JavaScript1.2>
@@ -45,7 +49,7 @@ function showsubmenu(sid) {
     <td width="61%" height="64"><img src="images/logo.gif" width="262" height="64"></td>
     <td width="39%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td width="74%" height="38" class="admin_txt">管理员：<b></b> 您好,感谢登陆使用！</td>
+        <td width="74%" height="38" class="admin_txt">管理员：<b><%=admin.Name%></b> 您好,感谢登陆使用！</td>
         <td width="22%"><a href="#" target="_self" onClick="logout();"><img src="images/out.gif" alt="安全退出" width="46" height="20" border="0"></a></td>
         <td width="4%">&nbsp;</td>
       </tr>

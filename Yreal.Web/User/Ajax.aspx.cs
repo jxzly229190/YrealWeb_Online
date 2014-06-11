@@ -25,6 +25,12 @@ namespace Yreal.Web.User
                 var re = this.ResetPwd(int.Parse(Request.Form["id"]));
                 this.Response.Write(re);
             }
+            else if (Request.Form["act"] == "out")
+            {
+                this.Session.Remove("LoginAdmin");
+                this.Response.Write("0");
+                return;
+            }
         }
 
         private AjaxResult ResetPwd(int id)
