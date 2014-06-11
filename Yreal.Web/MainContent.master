@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Index.Master" AutoEventWireup="true" CodeBehind="MainContent.master.cs" Inherits="Yreal.Web.MainContent" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    
+        </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Banner" runat="server">
+    <div id="nbanner" class="wrapper">
+    <asp:ContentPlaceHolder ID="BannerContent" runat="server">
+        
+    </asp:ContentPlaceHolder>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+          <!---------------右内容区域---------------------->
+    <div id="mainContent">
+    <dl id="cateContent">
+      <dt class="cateTitle">
+        <div id="position">当前位置：<a href="http://v4.950d.com/">首页</a> &gt; <a href="http://v4.950d.com/yewu/">业务范围</a></div>
+        <strong><asp:ContentPlaceHolder runat="server" ID="ContentTitle"></asp:ContentPlaceHolder></strong></dt>
+      <dd class="cateContentHead"></dd>
+      <dd class="cateContent clearfix">
+        <asp:ContentPlaceHolder runat="server" ID="RightContent"></asp:ContentPlaceHolder>
+	   </dd>
+      <dd class="cateContentFooter"></dd>
+    </dl>
+  </div>
+  
+  
+  <!---------------子菜单---------------------->
+    <div style="position: static; top: auto; left: auto; z-index: auto;" id="sidebar">
+    <dl class="mod">
+      <dt><asp:ContentPlaceHolder runat="server" ID="MenuItem"></asp:ContentPlaceHolder></dt>
+      <dd>
+        <ul>
+             <asp:ContentPlaceHolder runat="server" ID="SubMenu"></asp:ContentPlaceHolder>
+        </ul>
+      </dd>
+      <dd class="footer"></dd>
+    </dl>
+  </div>
+  <script type="text/javascript">
+      var navElm = '#sidebar';
+      var _defautlTop = $(navElm).offset().top;
+      var _position = $(navElm).css('position');
+      var _top = $(navElm).css('top');
+      var _left = $(navElm).css('left');
+      var _zIndex = $(navElm).css('z-index');
+      $(window).scroll(function () {
+          var _defautlLeft = $(navElm).offset().left;
+          if ($(this).scrollTop() > _defautlTop) {
+              if ($.browser.msie && $.browser.version == "6.0") {
+                  $(navElm).css({ 'position': 'absolute', 'top': eval(document.documentElement.scrollTop), 'left': _defautlLeft, 'z-index': 99999 });
+                  //$("html,body").css({'background-image':'url(other/.com/about:blank)','background-attachment':'fixed'});
+              } else {
+                  $(navElm).css({ 'position': 'fixed', 'top': 0, 'left': _defautlLeft, 'z-index': 1 });
+              }
+          } else {
+              $(navElm).css({ 'position': _position, 'top': _top, 'left': _left, 'z-index': _zIndex });
+          }
+      });
+	</script>
+  <div class="c"></div>
+</asp:Content>

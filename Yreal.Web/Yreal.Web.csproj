@@ -70,12 +70,17 @@
     <Content Include="Channel\ChannelMger.aspx" />
     <Content Include="Channel\Update.aspx" />
     <Content Include="common\Message.aspx" />
+    <Content Include="ContentPage.aspx" />
     <Content Include="Content\Add.aspx" />
     <Content Include="Content\Ajax.aspx" />
     <Content Include="Content\ContentMger.aspx" />
     <Content Include="Content\imageUpload.aspx" />
     <Content Include="Content\imageUpSuccess.aspx" />
     <Content Include="Content\Update.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="images\banner_1.jpg" />
+    <Content Include="kf\kefu_bg.png" />
+    <Content Include="kf\kefu_icon.png" />
     <Content Include="Main.aspx" />
     <Content Include="admin_top.aspx" />
     <Content Include="css\admin\Cloud.base.css" />
@@ -88,6 +93,48 @@
     <Content Include="css\jquery.thickbox.css" />
     <Content Include="css\jquery.uploadify.css" />
     <Content Include="css\jquery.webpart.css" />
+    <Content Include="res\20121027093046643.jpg" />
+    <Content Include="res\20121027093126573.jpg" />
+    <Content Include="res\20121027093303513.jpg" />
+    <Content Include="res\2012102709345595.jpg" />
+    <Content Include="res\20121027093534554.jpg" />
+    <Content Include="res\b1.jpg" />
+    <Content Include="res\b2.jpg" />
+    <Content Include="res\b3.jpg" />
+    <Content Include="res\b4.jpg" />
+    <Content Include="res\backtop.css" />
+    <Content Include="res\css.css" />
+    <Content Include="res\functions.htm" />
+    <Content Include="res\functions.js" />
+    <Content Include="res\getonline.htm" />
+    <Content Include="res\hotLine.gif" />
+    <Content Include="res\jquery.css" />
+    <Content Include="res\jquery.js" />
+    <Content Include="res\jquery.lightbox-0.5.css" />
+    <Content Include="res\jquery.min.js" />
+    <Content Include="res\jquery.SuperSlide.js" />
+    <Content Include="res\jquery_002.js" />
+    <Content Include="res\kf.css" />
+    <Content Include="res\logo.gif" />
+    <Content Include="res\share.js" />
+    <Content Include="res\sign_0001.jpg" />
+    <Content Include="res\sign_0002.jpg" />
+    <Content Include="res\sign_0003.jpg" />
+    <Content Include="res\sign_0007.gif" />
+    <Content Include="res\sign_0008.gif" />
+    <Content Include="res\sign_0009.gif" />
+    <Content Include="res\slides.js" />
+    <Content Include="res\slides.min.jquery.js" />
+    <Content Include="res\slide_share.css" />
+    <Content Include="res\s_20121026095155738.jpeg" />
+    <Content Include="res\s_20121026095155738.jpg" />
+    <Content Include="res\s_20121026095432518.jpeg" />
+    <Content Include="res\s_20121026095432518.jpg" />
+    <Content Include="res\s_20121031175054739.jpg" />
+    <Content Include="res\s_201210311753054.jpg" />
+    <Content Include="res\temp_0003.gif" />
+    <Content Include="res\temp_0004.gif" />
+    <Content Include="Test.aspx" />
     <Content Include="UE\dialogs\emotion\emotion.css" />
     <Content Include="UE\dialogs\emotion\emotion.js" />
     <Content Include="UE\dialogs\emotion\images\0.gif" />
@@ -388,6 +435,13 @@
     <Compile Include="Content.Master.designer.cs">
       <DependentUpon>Content.Master</DependentUpon>
     </Compile>
+    <Compile Include="ContentPage.aspx.cs">
+      <DependentUpon>ContentPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContentPage.aspx.designer.cs">
+      <DependentUpon>ContentPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Content\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -430,6 +484,20 @@
     <Compile Include="Content\Update.aspx.designer.cs">
       <DependentUpon>Update.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.Master.cs">
+      <DependentUpon>Index.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.Master.designer.cs">
+      <DependentUpon>Index.Master</DependentUpon>
+    </Compile>
     <Compile Include="Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -443,6 +511,20 @@
     </Compile>
     <Compile Include="admin_top.aspx.designer.cs">
       <DependentUpon>admin_top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainContent.master.cs">
+      <DependentUpon>MainContent.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainContent.master.designer.cs">
+      <DependentUpon>MainContent.master</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
     <Compile Include="UE\net\Uploader.cs" />
     <Compile Include="Uploade\getContent.ashx.cs">
@@ -548,6 +630,9 @@
   <ItemGroup>
     <Content Include="UE\net\getContent.ashx" />
     <Content Include="UE\net\imageUp.ashx" />
+    <Content Include="Index.Master" />
+    <Content Include="MainContent.master" />
+    <None Include="res\getonline" />
     <None Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.eot" />
     <None Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.ttf" />
     <None Include="UE\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.woff" />
