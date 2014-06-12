@@ -37,5 +37,10 @@ namespace BLL
         {
             return dal.GetDataSet(ctx, baseProcedure);
         }
+
+        public DataTable Select(Common.DataContext ctx, IModel.BaseTable baseTable)
+        {
+            return dal.Select(ctx, baseTable);
+        }
     }
 }

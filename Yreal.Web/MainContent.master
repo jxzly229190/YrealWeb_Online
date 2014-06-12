@@ -30,10 +30,16 @@
   <!---------------子菜单---------------------->
     <div style="position: static; top: auto; left: auto; z-index: auto;" id="sidebar">
     <dl class="mod">
-      <dt><asp:ContentPlaceHolder runat="server" ID="MenuItem"></asp:ContentPlaceHolder></dt>
+      <dt>
+          <asp:ContentPlaceHolder runat="server" ID="MenuItem">
+              
+          </asp:ContentPlaceHolder>
+      </dt>
       <dd>
         <ul>
-             <asp:ContentPlaceHolder runat="server" ID="SubMenu"></asp:ContentPlaceHolder>
+             <asp:ContentPlaceHolder runat="server" ID="SubMenu">
+                 
+             </asp:ContentPlaceHolder>
         </ul>
       </dd>
       <dd class="footer"></dd>

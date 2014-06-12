@@ -18,8 +18,16 @@
 <div id="head">
   <div class="wrapper"> <a href="./res/网建公司网站模板.htm" id="logo"><img src="./res/logo.gif" alt="网建公司网站模板"></a>
     <ul id="nav">
-      <li class="hover"><a href="./res/网建公司网站模板.htm">首页</a></li>
-      <li><a href="http://v4.950d.com/aboutus/">企业简介</a></li><li><a href="http://v4.950d.com/news/">新闻资讯</a></li><li><a href="http://v4.950d.com/products/">案例展示</a></li><li><a href="http://v4.950d.com/design/">设计理念</a></li><li><a href="http://v4.950d.com/yewu/">业务范围</a></li><li><a href="http://v4.950d.com/guestbook/">在线留言</a></li><li><a href="http://v4.950d.com/contact/">联系我们</a></li>    </ul>
+      <li class="hover"><a href="/Default.aspx">首页</a></li>
+      <% foreach (var channel in Channels)
+         {
+             if (channel.ParentId == 0)
+             { %>
+            <li ><a href="/ContentPage.aspx?Code=<%= channel.Code %>&CID=<%= channel.ID %>"><%=channel.Name %></a></li>
+            <% }
+         } %>
+      
+     </ul>
     <div class="c"></div>
   </div>
 </div>

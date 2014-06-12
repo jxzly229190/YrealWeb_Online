@@ -35,5 +35,14 @@ namespace DAL
             da.ProcedureEntity = baseProcedure;
             return da.ExecuteDataSet();
         }
+
+        public DataTable Select(DataContext ctx, BaseTable baseTable)
+        {
+            Common.DataAccess da = new Common.DataAccess();
+            if (ctx != null)
+                da.ctx = ctx;
+            da.TableEntity = baseTable;
+            return da.Select();
+        }
     }
 }

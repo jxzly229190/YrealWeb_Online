@@ -30,7 +30,7 @@
                                 foreach (var channel in channels)
                                {
                                     %>
-                                    <option id="<%=channel.ID %>" contenttype="<%=channel.ContentType %>" class="channel" type="<%=channel.Type %>"><%=channel.Name%></option>
+                                    <option value="<%=channel.ID %>" id="<%=channel.ID %>" contenttype="<%=channel.ContentType %>" class="channel" type="<%=channel.Type %>"><%=channel.Name%></option>
                                <%} %>
                         </select>
                     </td>
@@ -93,7 +93,7 @@
             var image = document.getElementById('iframepage').contentDocument.getElementById("imageUrl");
 
             var title = $("#txtTitle").val();
-            var channel = $("#ctl00_ContentPlaceHolder1_ddlChannel").val();
+            var channel = $("#ddlChannel").val();
             var content = UM.getEditor('container').getContent();
 
             if ($.isEmpty(title)) {
