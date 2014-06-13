@@ -41,10 +41,10 @@
                     <td align="left"><%# Eval("Title")%></td>
 					<td align="left"><%# Eval("ChannelName")%></td>
 					<td align="left"><%# PubFunc.RemoveHtml(HttpUtility.UrlDecode(Eval("ContentText").ToString())).Replace("%","")%></td>
-                    <td align="center"><%# Eval("Type")%></td>
+                    <td align="center"><%# Convert.ToInt16(Eval("Type")) == 1 ? "不带封面" : "带封面"%></td>
 					<td align="center"><%# Eval("Url")%></td>
 					<td align="center"><img src='<%# Eval("ImageUrls") %>' <%# string.IsNullOrEmpty(Eval("ImageUrls").ToString())?"":"width='100' hight='60'" %>/></td>
-                    <td align="center"><%# Eval("State")%></td>
+                    <td align="center"><%# Convert.ToInt16(Eval("State")) == 0 ? "正常" : "异常状态"%></td>
                     <td align="center"><%# Eval("CreateDate")%></td>
 					<td align="center">
                         <a href='Update.aspx?id=<%# Eval("ID") %>'>编辑</a>|

@@ -43,7 +43,7 @@
 					<td align="left"><%# Eval("Email")%></td>
                     <td align="left"><%# Eval("Mob")%></td>
 					<td align="center"><%# Eval("QQ")%></td>
-					<td align="center"><%# Eval("State")%></td>
+					<td align="center"><%# Convert.ToInt32(Eval("State"))==0?"正常":"锁定"%></td>
                     <td align="center"><%# Eval("CreateDate")%></td>
 					<td align="center">
                         <a href='javascript:Reset(<%# Eval("ID") %>)'>重置密码</a>|

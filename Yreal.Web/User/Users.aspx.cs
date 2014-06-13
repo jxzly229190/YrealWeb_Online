@@ -28,7 +28,7 @@ namespace Yreal.Web
             //    (SELECT ROW_NUMBER() OVER (ORDER BY usr_User.ID DESC) AS ROWNO,    
             string sql = @"Select top " + pageSize +
                          " [ID],[LoginName],[Password] ,[Name],[Mob],[Email],[QQ],[Remark],[State],[Ext],[CreateDate],[ModifyDate] from [Admin] where Id not in (SELECT top " +
-                         ((pageIndex - 1)*pageSize + 1) + " [ID] FROM [Admin]" +
+                         (pageIndex - 1) * pageSize + " [ID] FROM [Admin]" +
                          "Where State <> 255 And " + GetWhereStr() + ") and State <> 255  And " + GetWhereStr() +
                          " order by ID desc;Select count(ID) totalCount from [Admin] Where State <> 255 And " +
                          GetWhereStr();

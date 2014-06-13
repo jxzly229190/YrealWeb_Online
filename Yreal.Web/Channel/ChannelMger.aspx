@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="ChannelMger.aspx.cs" Inherits="Yreal.Web.Channel.ChannelMger" %>
+<%@ Import Namespace="System.Diagnostics" %>
 <%@ Register TagPrefix="asp" Namespace="Wuqi.Webdiyer" Assembly="AspNetPager, Version=7.0.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceTitle" runat="server">
     栏目管理
@@ -29,13 +30,13 @@
                 <tr id="tr_<%# Eval("ID")%>">
                     <td align="center"><%# Eval("ID")%></td>
                     <td align="left"><%# Eval("Name")%></td>
-					<td align="center"><%# Eval("Type")%></td>
-                    <td align="center"><%# Eval("ContentType")%></td>
+					<td align="center"><%# Convert.ToInt16(Eval("Type")) == 0 ? "单独内容页" : Convert.ToInt16(Eval("Type")) == 1?"内容列表页":"栏目列表页"%></td>
+                    <td align="center"><%# Convert.ToInt16(Eval("ContentType")) == 1 ? "不带封面" : "带封面"%></td>
 					<td align="center"><%# Eval("Code")%></td>
                     <td align="center"><%# Eval("Sort")%></td>
                     <td align="center"><img src='<%# Eval("ImageUrl") %>' <%# string.IsNullOrEmpty(Convert.ToString(Eval("ImageUrl")))?"":"width='100' hight='60'" %>/></td>
                     
-					<td align="center"><%# Eval("State")%></td>
+					<td align="center"><%# Convert.ToInt16(Eval("State")) == 0 ? "菜单显示" : Convert.ToInt16(Eval("Type")) == 1 ? "菜单不显示" : Convert.ToInt16(Eval("Type")) == 2 ? "不可用" : "异常状态"%></td>
 					<td align="center"><%# Eval("Remark")%></td>
                     <td align="center"><%# Eval("CreateDate")%></td>
 					<td align="center">
