@@ -45,6 +45,7 @@ namespace Yreal.Web.Channel
                 var txtState = Request.Form["sltState"];
                 var txtRemark = Request.Form["txtRemark"];
                 var txtSort = Request.Form["txtSort"];
+                var imageUrl = Request.Form["txtImage"];
 
                 if (string.IsNullOrEmpty(txtCode))
                 {
@@ -85,6 +86,7 @@ namespace Yreal.Web.Channel
                     CreatedBy = (Session["LoginAdmin"] as Model.Admin).ID,
                     ModifiedBy = (Session["LoginAdmin"] as Model.Admin).ID,
                     Remark = txtRemark,
+                    ImageUrl = imageUrl,
                     ParentId = Convert.ToInt16(txtParentId),
                     State = Convert.ToInt16(txtState),
                     Sort = Convert.ToInt16(txtSort),

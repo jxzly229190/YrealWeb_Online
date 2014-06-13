@@ -43,7 +43,7 @@
 					<td align="left"><%# PubFunc.RemoveHtml(HttpUtility.UrlDecode(Eval("ContentText").ToString())).Replace("%","")%></td>
                     <td align="center"><%# Eval("Type")%></td>
 					<td align="center"><%# Eval("Url")%></td>
-					<td align="center"><%# Eval("ImageUrls")%></td>
+					<td align="center"><img src='<%# Eval("ImageUrls") %>' <%# string.IsNullOrEmpty(Eval("ImageUrls").ToString())?"":"width='100' hight='60'" %>/></td>
                     <td align="center"><%# Eval("State")%></td>
                     <td align="center"><%# Eval("CreateDate")%></td>
 					<td align="center">

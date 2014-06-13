@@ -26,6 +26,14 @@
                         <td align="right">代码：</td>
                     <td  width="92%"><input name="txtCode" class="input200" id="txtCode" maxlength="20" type="text"></td>
                     </tr>
+                    <tr  width="8%">
+                        <td align="right">栏目封面：</td>
+                    <td  width="92%">
+                        <input type="hidden" id="txtImage" name="txtImage" value="456789"/>
+                        <iframe width="500" id="iframepage" height="50" frameborder="no" border="0" marginwidth="0" marginheight="0" src="../Content/imageUpload.aspx" onload="iFrameHeight()"></iframe>
+                        <input type="button" onclick="$('#iframepage').attr('src','/Content/imageUpload.aspx')" value="删除"/>
+                    </td>
+                    </tr>
                     <tr>
                         <td align="right">类型：</td>
                     <td><asp:DropDownList ID="ddlType" runat="server">
@@ -58,4 +66,17 @@
                 </table>
         </div>
 </form>
+<script type="text/javascript">
+    function iFrameHeight() {
+        var ifm = document.getElementById("iframepage");
+        var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
+        if (ifm != null && subWeb != null) {
+            ifm.height = subWeb.body.scrollHeight;
+        }
+
+        var image = document.getElementById('iframepage').contentDocument.getElementById("imageUrl");
+        $("#txtImage").val($(image).attr("src"));
+    }
+
+</script>
 </asp:Content>

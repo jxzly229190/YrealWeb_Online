@@ -29,15 +29,13 @@
                         </td>
                     </tr>
                     <tr  width="8%">
-                        <td align="right">封面图片：</td>
-                        <td  width="92%"><tr  width="8%">
                     <td align="right">封面图片：</td>
                     <td  width="92%">
-                        <input type="hidden" id="txtImage"/>
+                        <img src="<%=Content.ImageUrls %>" id="imgShow"/>
+                        <input type="hidden" id="txtImage" value="<%=Content.ImageUrls %>"/>
                         <iframe width="500" id="iframepage" height="50" frameborder="no" border="0" marginwidth="0" marginheight="0" src="imageUpload.aspx" onload="iFrameHeight()"></iframe>
-                        <input type="button" onclick="$('#iframepage').attr('src','imageUpload.aspx')" value="删除"/>
+                        <input type="button" onclick="$('#iframepage').attr('src','imageUpload.aspx');$('#imgShow').remove();$('#txtImage').val('');" value="删除"/>
                     </td>
-                </tr></td>
                     </tr>
                     <tr>
                         <td align="right">内容：</td>

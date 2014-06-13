@@ -23,7 +23,7 @@ namespace Yreal.Web.Channel
 
             ctx.CommandType = CommandType.Text;
             //    (SELECT ROW_NUMBER() OVER (ORDER BY usr_User.ID DESC) AS ROWNO,    
-            string sql = @"Select [ID],Case ParentId when 0 then [Name] else '|----'+[Name] end [Name],[Type],[ContentType],[Code],[ParentId],[Sort],Case ParentId when 0 then ID else ParentId end sortId,[State],[CreateDate],[ModifyDate],[CreatedBy],[ModifiedBy],[Remark],[Ext] from [Channel] where State <> 255 order by sortId";
+            string sql = @"Select [ID],Case ParentId when 0 then [Name] else '|----'+[Name] end [Name],[Type],[ContentType],[ImageUrl],[Code],[ParentId],[Sort],Case ParentId when 0 then ID else ParentId end sortId,[State],[CreateDate],[ModifyDate],[CreatedBy],[ModifiedBy],[Remark],[Ext] from [Channel] where State <> 255 order by sortId";
 
             var dataset = ctx.ExecuteDataSet(sql);
 

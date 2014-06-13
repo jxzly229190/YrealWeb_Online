@@ -11,14 +11,15 @@
 			<thead>
 				<tr>
 				    <th width="3%">编码</th>
-					<th width="10%">名称</th>
+					<th width="8%">名称</th>
 					<th width="4%">类型</th>
                     <th width="4%">内容类型</th>
 					<th width="5%">代号</th>
                     <th width="3%">排序</th>
+                    <th width="4%">栏目封面</th>
 					<th width="4%">状态</th>
-                    <th width="15%">备注</th>
-                    <th width="4%">创建时间</th>
+                    <th width="8%">备注</th>
+                    <th width="6%">创建时间</th>
 					<th width="8%">操作</th>
 				</tr>
 			</thead>
@@ -32,6 +33,8 @@
                     <td align="center"><%# Eval("ContentType")%></td>
 					<td align="center"><%# Eval("Code")%></td>
                     <td align="center"><%# Eval("Sort")%></td>
+                    <td align="center"><img src='<%# Eval("ImageUrl") %>' <%# string.IsNullOrEmpty(Convert.ToString(Eval("ImageUrl")))?"":"width='100' hight='60'" %>/></td>
+                    
 					<td align="center"><%# Eval("State")%></td>
 					<td align="center"><%# Eval("Remark")%></td>
                     <td align="center"><%# Eval("CreateDate")%></td>
