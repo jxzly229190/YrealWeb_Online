@@ -16,7 +16,10 @@
     <div id="mainContent">
     <dl id="cateContent">
       <dt class="cateTitle">
-        <div id="position">当前位置：<a href="http://v4.950d.com/">首页</a> &gt; <a href="http://v4.950d.com/yewu/">业务范围</a></div>
+        <div id="position">当前位置：<a href="/Default.aspx">首页</a> &gt;<asp:ContentPlaceHolder ID="ContentPlaceBreakNav" runat="server">
+    
+        </asp:ContentPlaceHolder>
+        </div>
         <strong><asp:ContentPlaceHolder runat="server" ID="ContentTitle"></asp:ContentPlaceHolder></strong></dt>
       <dd class="cateContentHead"></dd>
       <dd class="cateContent clearfix">

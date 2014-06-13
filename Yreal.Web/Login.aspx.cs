@@ -29,7 +29,7 @@ namespace Yreal.Web
 
                 var result =
                     dataContext.ExecuteDataTable(
-                        "Select [LoginName],[Password],[Name],[Mob],[Email],[QQ],[Remark] From [Admin] Where [State] =0 and [LoginName]='" +
+                        "Select ID,[LoginName],[Password],[Name],[Mob],[Email],[QQ],[Remark] From [Admin] Where [State] =0 and [LoginName]='" +
                         txtName +
                         "' and Password = '" + Common.PubFunc.Md5(txtPwd) + "'");
 

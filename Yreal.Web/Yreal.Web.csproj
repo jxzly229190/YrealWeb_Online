@@ -405,6 +405,7 @@
     <Content Include="script\jquery.webpart.js" />
     <Content Include="User\Ajax.aspx" />
     <Content Include="User\Detail.aspx" />
+    <Content Include="User\Password.aspx" />
     <Content Include="User\Update.aspx" />
     <Content Include="User\Users.aspx" />
     <Content Include="Web.config" />
@@ -601,6 +602,13 @@
     </Compile>
     <Compile Include="User\Detail.aspx.designer.cs">
       <DependentUpon>Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Password.aspx.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Password.aspx.designer.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\Update.aspx.cs">
       <DependentUpon>Update.aspx</DependentUpon>

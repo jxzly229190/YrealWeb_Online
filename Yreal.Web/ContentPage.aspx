@@ -3,8 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <title>内容页面</title>
 </asp:Content>
+<asp:Content runat="server" ContentPlaceHolderID="ContentPlaceBreakNav">
+    <a href="###"><%=channel.Name %></a>
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BannerContent" runat="server">
-    <img width="1000" height="290" src="/images/banner_1.jpg"/>
+    <img width="1000" height="290" src="<%=!string.IsNullOrEmpty(channel.ImageUrl)?channel.ImageUrl:"/images/banner_1.jpg" %>"/>
 </asp:Content>
 <asp:Content runat="server" ContentPlaceHolderID="RightContent" ID="fasdf">
     
