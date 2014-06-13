@@ -18,12 +18,12 @@
 <div id="head">
   <div class="wrapper"> <a href="./res/网建公司网站模板.htm" id="logo"><img src="./res/logo.gif" alt="网建公司网站模板"></a>
     <ul id="nav">
-      <li class="hover"><a href="/Default.aspx">首页</a></li>
+      <li <%=Request.QueryString["CID"]??"class='hover'" %>  id="indexNav"><a href="/Default.aspx">首页</a></li>
       <% foreach (var channel in Channels)
          {
              if (channel.ParentId == 0)
              { %>
-            <li ><a href="/ContentPage.aspx?Code=<%= channel.Code %>&CID=<%= channel.ID %>"><%=channel.Name %></a></li>
+            <li <%=channel.ID==Convert.ToInt32(Request.QueryString["CID"])?"class='hover'":"" %> ><a href="/ContentPage.aspx?Code=<%= channel.Code %>&CID=<%= channel.ID %>"><%=channel.Name %></a></li>
             <% }
          } %>
       
