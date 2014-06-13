@@ -26,7 +26,7 @@ namespace Yreal.Web.Content
             ctx.CommandType = CommandType.Text;
             //    (SELECT ROW_NUMBER() OVER (ORDER BY usr_User.ID DESC) AS ROWNO,    
             string sql = @"Select top " + pageSize +
-                         " [ID],[ChannelID],[ChannelName],[ChannelCode],[Type],[ImageUrls],[Title],substring([ContentText],0,60)+'...' as ContentText,[Url],[Attributes],[CreateDate],[CreatedBy],[ModifyDate],[ModifiedBy],[Remark],[Ext],[State] from [Content] where Id not in (SELECT top " +
+                         " [ID],[ChannelID],[ChannelName],[ChannelCode],[Type],[ImageUrls],[Title],substring([ContentText],1,200)+'...' as ContentText,[Url],[Attributes],[CreateDate],[CreatedBy],[ModifyDate],[ModifiedBy],[Remark],[Ext],[State] from [Content] where Id not in (SELECT top " +
                          (pageIndex - 1) * pageSize + " [ID] FROM [Content] Where State <> 255 And " + GetWhereStr() + " Order by ID desc) and State <> 255  And " + GetWhereStr() +
                          " order by ID desc;Select count(ID) totalCount from [Content] Where State <> 255 And " + GetWhereStr()+";Select Name,ID From Channel Where State<>255";
 

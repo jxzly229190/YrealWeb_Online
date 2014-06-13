@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="ContentMger.aspx.cs" Inherits="Yreal.Web.Content.ContentMger" %>
+<%@ Import Namespace="Common" %>
 <%@ Register TagPrefix="asp" Namespace="Wuqi.Webdiyer" Assembly="AspNetPager, Version=7.0.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceTitle" runat="server">
     内容管理
@@ -39,7 +40,7 @@
                 <tr id="tr_<%# Eval("ID")%>">
                     <td align="left"><%# Eval("Title")%></td>
 					<td align="left"><%# Eval("ChannelName")%></td>
-					<td align="left"><%# Eval("ContentText")%></td>
+					<td align="left"><%# PubFunc.RemoveHtml(HttpUtility.UrlDecode(Eval("ContentText").ToString())).Replace("%","")%></td>
                     <td align="center"><%# Eval("Type")%></td>
 					<td align="center"><%# Eval("Url")%></td>
 					<td align="center"><%# Eval("ImageUrls")%></td>
