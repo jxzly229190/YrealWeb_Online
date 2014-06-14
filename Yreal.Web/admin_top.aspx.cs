@@ -16,7 +16,7 @@ namespace Yreal.Web
             admin = Session["LoginAdmin"] as Model.Admin;
             if(admin==null)
             {
-                admin=new Admin();
+                admin=new Model.Admin();
             }
         }
     }

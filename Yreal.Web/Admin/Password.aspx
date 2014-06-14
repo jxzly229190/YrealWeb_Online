@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="Password.aspx.cs" Inherits="Yreal.Web.User.Password" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="Password.aspx.cs" Inherits="Yreal.Web.Admin.Password" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceTitle" runat="server">
     修改密码
 </asp:Content>
@@ -6,7 +6,7 @@
     <form id="form1" runat="server" action="Password.aspx" method="post">
         <div class="linePanel">
 		        <div class="viewAction">
-                    <input class="btnText" id="btnBack" href="/Users.aspx" value="列表" onclick="window.location='/User/Users.aspx';" type="button">
+                    <input class="btnText" id="btnBack" href="/Users.aspx" value="列表" onclick="window.location='/Admin/Users.aspx';" type="button">
 		        </div>
                 <table class="tbExtend tb-line bgcw lineHeigth30 top15 bottom15 p5">
                     <tbody>

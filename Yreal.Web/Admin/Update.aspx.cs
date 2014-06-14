@@ -1,34 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Common;
-
-namespace Yreal.Web.User
+﻿namespace Yreal.Web.Admin
 {
+    using System;
+    using System.Web.UI.WebControls;
+
+    using Common;
+
     public partial class Update : System.Web.UI.Page
     {
         protected string LoginName, Name, Mob, Email, QQ, Remark, State, id;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack)
+            if (this.IsPostBack)
             {
-                id = Request.Form["id"];
-                var txtLgName = Request.Form["txtLgName"];
-                var txtName = Request.Form["txtName"];
-                var txtEmail = Request.Form["txtMail"];
-                var txtMob = Request.Form["txtMob"];
-                var txtQQ = Request.Form["txtQQ"];
-                var txtRemark = Request.Form["txtRemark"];
-                var txtState = ddlState.SelectedValue;
+                this.id = this.Request.Form["id"];
+                var txtLgName = this.Request.Form["txtLgName"];
+                var txtName = this.Request.Form["txtName"];
+                var txtEmail = this.Request.Form["txtMail"];
+                var txtMob = this.Request.Form["txtMob"];
+                var txtQQ = this.Request.Form["txtQQ"];
+                var txtRemark = this.Request.Form["txtRemark"];
+                var txtState = this.ddlState.SelectedValue;
 
                 var dt = new Model.Admin()
                              {
-                                 ID = int.Parse(id),
+                                 ID = int.Parse(this.id),
                                  Email = txtEmail,
                                  LoginName = txtLgName,
                                  ModifyDate = DateTime.Now,
@@ -50,7 +46,7 @@ namespace Yreal.Web.User
 
                     dc.CommitTransaction();
 
-                    response = new AjaxResult() { Success = 1, Message = "操作成功", Data = id };
+                    response = new AjaxResult() { Success = 1, Message = "操作成功", Data = this.id };
                 }
                 catch (Exception exception)
                 {
@@ -66,31 +62,31 @@ namespace Yreal.Web.User
             }
             else
             {
-                id = Request.QueryString["id"];
-                if (!string.IsNullOrEmpty(id))
+                this.id = this.Request.QueryString["id"];
+                if (!string.IsNullOrEmpty(this.id))
                 {
                     var ctx = new DataContext();
 
                     var dt = ctx.ExecuteDataTable(
                         "SELECT [LoginName],[Password],[Name],[Mob],[Email],[QQ],[Remark],[State],[CreateDate],[ModifyDate] From [Admin] Where id=" +
-                        id + " and [state]<>255");
+                        this.id + " and [state]<>255");
 
                     if (dt != null && dt.Rows.Count > 0)
                     {
-                        LoginName = dt.Rows[0]["LoginName"].ToString();
-                        Name = dt.Rows[0]["Name"].ToString();
-                        Mob = dt.Rows[0]["Mob"].ToString();
-                        Email = dt.Rows[0]["Email"].ToString();
-                        QQ = dt.Rows[0]["QQ"].ToString();
-                        Remark = dt.Rows[0]["Remark"].ToString();
-                        State = dt.Rows[0]["State"].ToString();
+                        this.LoginName = dt.Rows[0]["LoginName"].ToString();
+                        this.Name = dt.Rows[0]["Name"].ToString();
+                        this.Mob = dt.Rows[0]["Mob"].ToString();
+                        this.Email = dt.Rows[0]["Email"].ToString();
+                        this.QQ = dt.Rows[0]["QQ"].ToString();
+                        this.Remark = dt.Rows[0]["Remark"].ToString();
+                        this.State = dt.Rows[0]["State"].ToString();
 
-                        ddlState.Items.Add(new ListItem("正常","0"));
-                        ddlState.Items.Add(new ListItem("锁定", "1"));
-                        ddlState.SelectedValue = State;
+                        this.ddlState.Items.Add(new ListItem("正常","0"));
+                        this.ddlState.Items.Add(new ListItem("锁定", "1"));
+                        this.ddlState.SelectedValue = this.State;
                     }else
                     {
-                        Response.Write(common.Common.GetJSMsgBox("没有获取到用户信息"));
+                        this.Response.Write(common.Common.GetJSMsgBox("没有获取到用户信息"));
                     }
                 }
             }

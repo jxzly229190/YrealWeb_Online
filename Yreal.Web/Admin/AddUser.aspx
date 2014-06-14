@@ -6,7 +6,7 @@
     <form id="form1" runat="server" action="AddUser.aspx" method="post">
         <div class="linePanel">
 		        <div class="viewAction">
-                    <input class="btnText" id="btnBack" href="/Users.aspx" value="列表" onclick="window.location='/User/Users.aspx';" type="button">
+                    <input class="btnText" id="btnBack" href="/Users.aspx" value="列表" onclick="window.location='/Admin/Users.aspx';" type="button">
 		        </div>
                 <table class="tbExtend tb-line bgcw lineHeigth30 top15 bottom15 p5">
                     <tbody><tr>

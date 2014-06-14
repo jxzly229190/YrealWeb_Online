@@ -153,9 +153,9 @@ H1 a {
           </tr>
         </table>
         <ul class="MM">
-          <li><a href="User/Users.aspx" target="main">用户管理</a></li>
-          <li><a href="User/AddUser.aspx" target="main">添加用户</a></li>
-          <li><a href="User/Password.aspx" target="main">修改密码</a></li>
+          <li><a href="Admin/Users.aspx" target="main">用户管理</a></li>
+          <li><a href="Admin/AddUser.aspx" target="main">添加用户</a></li>
+          <li><a href="Admin/Password.aspx" target="main">修改密码</a></li>
         </ul>
       </div>
       <h1 class="type"><a href="javascript:void(0)">内容管理</a></h1>

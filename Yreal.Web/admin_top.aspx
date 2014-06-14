@@ -9,7 +9,7 @@
 <script language=JavaScript>
     function logout() {
         if (confirm("您确定要退出控制面板吗？")) {
-            jQuery.post("/User/Ajax.aspx", { "act": "out" }, function() {
+            jQuery.post("/Admin/Ajax.aspx", { "act": "out" }, function() {
                 alert('成功退出。');
                 top.location = "login.aspx";
             }, "text");

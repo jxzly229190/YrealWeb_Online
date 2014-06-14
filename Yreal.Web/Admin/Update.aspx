@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="Update.aspx.cs" Inherits="Yreal.Web.User.Update" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="Update.aspx.cs" Inherits="Yreal.Web.Admin.Update" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceTitle" runat="server">
     修改用户
 </asp:Content>
@@ -7,7 +7,7 @@
         <div class="linePanel">
             <input type="hidden" value="<%=id %>" name="id"/>
 		        <div class="viewAction">
-                    <input class="btnText" id="btnBack" href="/Users.aspx" value="列表" onclick="window.location='/User/Users.aspx';" type="button">
+                    <input class="btnText" id="btnBack" href="/Users.aspx" value="列表" onclick="window.location='/Admin/Users.aspx';" type="button">
 		        </div>
                 <table class="tbExtend tb-line bgcw lineHeigth30 top15 bottom15 p5">
                     <tbody>

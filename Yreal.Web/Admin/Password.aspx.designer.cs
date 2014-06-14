@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace Yreal.Web.User {
+namespace Yreal.Web.Admin {
     
     
     public partial class Password {

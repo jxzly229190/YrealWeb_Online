@@ -237,7 +237,7 @@
     <Content Include="UE\umeditor.config.js" />
     <Content Include="UE\umeditor.js" />
     <Content Include="UE\umeditor.min.js" />
-    <Content Include="User\AddUser.aspx" />
+    <Content Include="Admin\AddUser.aspx" />
     <Content Include="images\!.gif" />
     <Content Include="images\ad.gif" />
     <Content Include="images\add.gif" />
@@ -403,11 +403,11 @@
     <Content Include="script\jquery.thickbox.js" />
     <Content Include="script\jquery.uploadify.min.js" />
     <Content Include="script\jquery.webpart.js" />
-    <Content Include="User\Ajax.aspx" />
-    <Content Include="User\Detail.aspx" />
-    <Content Include="User\Password.aspx" />
-    <Content Include="User\Update.aspx" />
-    <Content Include="User\Users.aspx" />
+    <Content Include="Admin\Ajax.aspx" />
+    <Content Include="Admin\Detail.aspx" />
+    <Content Include="Admin\Password.aspx" />
+    <Content Include="Admin\Update.aspx" />
+    <Content Include="Admin\Users.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -560,11 +560,11 @@
       <DependentUpon>imageUp.ashx</DependentUpon>
     </Compile>
     <Compile Include="Uploade\Uploader.cs" />
-    <Compile Include="User\AddUser.aspx.cs">
+    <Compile Include="Admin\AddUser.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>AddUser.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\AddUser.aspx.designer.cs">
+    <Compile Include="Admin\AddUser.aspx.designer.cs">
       <DependentUpon>AddUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="left.aspx.cs">
@@ -589,39 +589,39 @@
     <Compile Include="right.aspx.designer.cs">
       <DependentUpon>right.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\Ajax.aspx.cs">
+    <Compile Include="Admin\Ajax.aspx.cs">
       <DependentUpon>Ajax.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\Ajax.aspx.designer.cs">
+    <Compile Include="Admin\Ajax.aspx.designer.cs">
       <DependentUpon>Ajax.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\Detail.aspx.cs">
+    <Compile Include="Admin\Detail.aspx.cs">
       <DependentUpon>Detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\Detail.aspx.designer.cs">
+    <Compile Include="Admin\Detail.aspx.designer.cs">
       <DependentUpon>Detail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\Password.aspx.cs">
+    <Compile Include="Admin\Password.aspx.cs">
       <DependentUpon>Password.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\Password.aspx.designer.cs">
+    <Compile Include="Admin\Password.aspx.designer.cs">
       <DependentUpon>Password.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\Update.aspx.cs">
+    <Compile Include="Admin\Update.aspx.cs">
       <DependentUpon>Update.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\Update.aspx.designer.cs">
+    <Compile Include="Admin\Update.aspx.designer.cs">
       <DependentUpon>Update.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\Users.aspx.cs">
+    <Compile Include="Admin\Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\Users.aspx.designer.cs">
+    <Compile Include="Admin\Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
     <Compile Include="Welcome\Default.aspx.cs">
