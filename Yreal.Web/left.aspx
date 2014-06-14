@@ -181,7 +181,7 @@ H1 a {
         </table>
         <ul class="MM">
              <ul class="MM">
-          <li><a href="http://www.865171.cn" target="main">暂无内容</a></li>
+          <li><a target="main">暂无内容</a></li>
         </ul>
         </ul>
       </div>

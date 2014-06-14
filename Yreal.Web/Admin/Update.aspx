@@ -11,7 +11,7 @@
 		        </div>
                 <table class="tbExtend tb-line bgcw lineHeigth30 top15 bottom15 p5">
                     <tbody>
-                    <tr  width="8%">
+                    <tr width="8%">
                         <td align="right">登录名：</td>
                         <td  width="92%"><input name="txtLgName" class="input200" id="txtLgName" maxlength="20" type="text" value='<%= LoginName %>' /></td>
                     </tr>
