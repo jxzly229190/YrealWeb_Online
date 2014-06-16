@@ -1,20 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Yreal.Web.Channel
 {
-    using System.Net.Configuration;
-
     using Common;
-
-    using DAL;
-
     using Model;
-
     using Yreal.Web.common;
 
     public partial class Update : System.Web.UI.Page

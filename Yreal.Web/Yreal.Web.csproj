@@ -44,6 +44,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\AspNetPager.dll</HintPath>
     </Reference>
+    <Reference Include="CuteWebUI.AjaxUploader, Version=3.0.0.0, Culture=neutral, PublicKeyToken=bc00d4b0e43ec38d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CuteWebUI.AjaxUploader.dll</HintPath>
+    </Reference>
     <Reference Include="SamuelControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\SamuelControl.dll</HintPath>
@@ -65,10 +69,12 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Attribute\Attribute.aspx" />
     <Content Include="Channel\Add.aspx" />
     <Content Include="Channel\Ajax.aspx" />
     <Content Include="Channel\ChannelMger.aspx" />
     <Content Include="Channel\Update.aspx" />
+    <Content Include="common\ImageUploader.ascx" />
     <Content Include="common\Message.aspx" />
     <Content Include="ContentPage.aspx" />
     <Content Include="Content\Add.aspx" />
@@ -418,6 +424,13 @@
     <Content Include="Welcome\Default.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attribute\Attribute.aspx.cs">
+      <DependentUpon>Attribute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attribute\Attribute.aspx.designer.cs">
+      <DependentUpon>Attribute.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Channel\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -447,6 +460,13 @@
       <DependentUpon>Update.aspx</DependentUpon>
     </Compile>
     <Compile Include="common\Common.cs" />
+    <Compile Include="common\ImageUploader.ascx.cs">
+      <DependentUpon>ImageUploader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="common\ImageUploader.ascx.designer.cs">
+      <DependentUpon>ImageUploader.ascx</DependentUpon>
+    </Compile>
     <Compile Include="common\Message.aspx.cs">
       <DependentUpon>Message.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
