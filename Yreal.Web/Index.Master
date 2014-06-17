@@ -3,6 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
 <asp:ContentPlaceHolder ID="head" runat="server">
         
 </asp:ContentPlaceHolder>
@@ -13,10 +14,16 @@
 <link href="./res/jquery.lightbox-0.5.css" rel="stylesheet" type="text/css">
 <link href="./res/kf.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="./res/jquery.min.js"></script>
-<script src="./res/share.js"></script></head>
+<script src="./res/share.js"></script>
+</head>
 <body>
 <div id="head">
-  <div class="wrapper"> <a href="/Default.aspx" id="logo"><img src="./res/logo.gif" alt=""></a>
+  <div class="wrapper">
+      <a href="/Default.aspx" id="logo"><% if (LogoConfig != null)
+                                           {%>
+                                               <img src="<%=LogoConfig.Image %>" alt=""/>
+                                           <%} %>
+                                           </a>
     <ul id="nav">
       <li <%=Request.QueryString["CID"]??"class='hover'" %>  id="indexNav"><a href="/Default.aspx">首页</a></li>
       <% foreach (var channel in Channels)

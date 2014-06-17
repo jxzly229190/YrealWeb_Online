@@ -181,7 +181,7 @@ H1 a {
         </table>
         <ul class="MM">
              <ul class="MM">
-          <li><a target="main">暂无内容</a></li>
+          <li><a href="Config/Config.aspx" target="main">首页配置</a></li>
         </ul>
         </ul>
       </div>

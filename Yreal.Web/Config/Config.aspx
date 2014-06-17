@@ -7,7 +7,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <form id="Form1" action="" runat="server">
     <div class="linePanel">
-	</div>
     <div class="top10">
         <table class="tbList tb-h bgcw">
 			<thead>
@@ -65,7 +64,7 @@
                     }
                 },
                 error: function () {
-                    alert("操作失敗");
+                    alert("操作失败");
                 }
             });
         }

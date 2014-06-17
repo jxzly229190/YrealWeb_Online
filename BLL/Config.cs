@@ -2,6 +2,8 @@
 
 namespace BLL
 {
+    using System.Linq;
+
     public class Config:BLLBase
     {
          public List<Model.Config> GetBanners(Common.DataContext ctx)
@@ -31,7 +33,7 @@ namespace BLL
              var tb = this.Select(ctx, new Model.Config() {State = 0});
              if (tb != null && tb.Rows.Count > 0)
              {
-                 return tb.ToList<Model.Config>();
+                 return tb.ToList<Model.Config>().OrderBy(c => c.Code).ToList();
              }
 
              return new List<Model.Config>();

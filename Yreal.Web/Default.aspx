@@ -8,10 +8,17 @@
     <div id="banner" class="wrapper">
         <div id="slides">
     <div class="slides_container" >
-    <a href="###" title="DocCms 关注用户体验，提升服务品质！" ><img src="./res/b1.jpg" width="1000" height="330" alt="DocCms 关注用户体验，提升服务品质！"></a>
-    <a href="###" title="ShlCms华丽转身，来到DocCms时代！"><img src="./res/b2.jpg" width="1000" height="330" alt="ShlCms华丽转身，来到DocCms时代！"></a>
-    <a href="###" title="新功能，新视觉，新体验就在DocCms x1.0" ><img src="./res/b3.jpg" width="1000" height="330" alt="新功能，新视觉，新体验就在DocCms x1.0"></a>
-    <a href="###" title="DocCms x1.0 企业建站，让您赢在起跑线~"><img src="./res/b4.jpg" width="1000" height="330" alt="DocCms x1.0 企业建站，让您赢在起跑线~"></a></div>
+        <% if (Configs != null)
+           {
+               foreach (var config in Configs)
+               {
+                   if (config.Code == "Banner"&&!string.IsNullOrEmpty(config.Image))
+                   {%>
+                       <a href="<%=config.Url %>" title="<%=config.Text %>" ><img src="<%=config.Image %>" width="1000" height="330" alt="<%=config.Text %>"></a>
+                   <%}
+               }
+           } %>
+    </div>
     <a href="###" class="prev"></a>
 	<a href="###" class="next"></a>
 	</div>
@@ -35,25 +42,39 @@
     <div class="projectContainer">
       <div class="tempWrap" style="overflow:hidden; position:relative; width:960px">
           <ul class="content" style="width: 3840px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -1859.03616px;">
-            <li class="clone" style="float: left; width: 320px;">
-                  <div class="container"><a href="/ContentPage.aspx?Cid=8&Code=Product&SID=9&SCode=ERP"><img src="./res/sign_0007.gif"></a>
-                    <div class="title"><a href="/ContentPage.aspx?Cid=8&Code=Product&SID=9&SCode=ERP">鞋厂ERP系统</a><a href="/ContentPage.aspx?Cid=8&Code=Product&SID=9&SCode=ERP">专业-可靠-稳定-高效的企业ERP</a></div>
-                    <div class="intro">结合了先进管理模式，使用最新的科技技术，为制鞋企业提供全面，先进，务实，高效的资讯服务。</div>
-                  </div>
-            </li>
-            <li class="clone" style="float: left; width: 320px;">
-              <div class="container"><a href="/ContentPage.aspx?Cid=8&Code=Product&SID=10&SCode=Web"><img src="./res/sign_0001.jpg"></a>
-                <div class="title"><a href="/ContentPage.aspx?Cid=8&Code=Product&SID=10&SCode=Web">企业网站系统</a><a href="/ContentPage.aspx?Cid=8&Code=Product&SID=10&SCode=Web">轻巧高效，简单易用的企业网站系统</a></div>
-                <div class="intro">操作极其便捷，一切都是基于用户体验和极其简易的操作而设计。</div>
-              </div>    
-            </li>
-            <li class="clone" style="float: left; width: 320px;">
-                <div class="container"><a href="/ContentPage.aspx?Cid=8&Code=Product&SID=11&SCode=Service"><img src="./res/sign_0008.gif"></a>
-                <div class="title"><a href="/ContentPage.aspx?Cid=8&Code=Product&SID=11&SCode=Service">服务与支持</a><a href="/ContentPage.aspx?Cid=8&Code=Product&SID=11&SCode=Service">7X24小时不间断</a></div>
-                <div class="intro">问题受理中心 专业精神，专业服务。</div>
-                </div>
-            </li>
-        
+            <%
+          if (Configs != null)
+          {
+              foreach (var config in Configs)
+              {
+                  if (config.Code == "Product")
+                  {%>
+                    <li class="clone" style="float: left; width: 320px;">
+                
+                          <div class="container"><a href="<%=config.Url %>"><img src="<%=config.Image %>"></a>
+                          <div class="title">
+                          <% var texts = config.Text.Split('|');
+                             if (texts.Length > 0)
+                             {%>
+                                 <a href="<%=config.Url %>"><%=texts[0] %></a>
+                             <%}
+                               
+                               if (texts.Length > 1)
+                             {%>
+                                 <a href="<%=config.Url %>"><%=texts[1]%></a>
+                             <%}%>
+                               </div>
+                              <% if (texts.Length > 2)
+                             {%>
+                                  <div class="intro"><%=texts[2] %></div>
+                             <%}%>
+                          </div>
+                    </li>
+                  <%}
+              }
+          }
+           %>
+            
           </ul>
       </div>
       <ul class="title"><li class="">1</li><li class="on">2</li></ul>
@@ -70,16 +91,21 @@
     <dl id="about" class="l">
       <dt class="title"><a href="/ContentPage.aspx?Cid=1&Code=About&SID=2&SCode=Aboutus" class="more">查看更多</a> <strong>关于我们</strong></dt>
       <dd class="content">&nbsp;&nbsp;&nbsp;&nbsp;
-	Yreal.Com致力于设计开发企业网站模板，注重稻壳cms(深喉咙cms)、PHPcms等网站内容管理系统的企业网站模板设计，为广大企业及网建公司提供各类通用型企业网站模板。
-
-
-	本站设计开发的企业网站模板大部分基于稻壳cms(doccms)和深喉咙cms(shlcms)以及PHPCMS系统环境下使用，本站的企业网站模板通用性强、各大浏览器兼容性好。
-
-
-	本站的企业模板有如下特点：
-
-
-	1、模板全部基于XHMTL+CSS进行布局，... <a href="/ContentPage.aspx?Cid=1&Code=About&SID=2&SCode=Aboutus">详细介绍&gt;&gt;</a> </dd>
+      <%
+          if (Configs != null)
+          {
+              foreach (var config in Configs)
+              {
+                  if (config.Code == "About")
+                  {%>
+                      <%=config.Text %>
+                        ... <a href="<%=config.Url %>">详细介绍&gt;&gt;</a>
+                  <%
+                      break;
+                  }
+              }
+          }
+           %> </dd>
     </dl>
     <dl id="news" class="r">
       <dt class="title"> <a href="/ContentPage.aspx?Code=News&CID=4" class="more">查看更多</a>

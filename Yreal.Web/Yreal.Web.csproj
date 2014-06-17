@@ -69,15 +69,14 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Attribute\Attribute.aspx" />
     <Content Include="Channel\Add.aspx" />
     <Content Include="Channel\Ajax.aspx" />
     <Content Include="Channel\ChannelMger.aspx" />
     <Content Include="Channel\Update.aspx" />
-    <Content Include="common\ImageUploader.ascx" />
     <Content Include="common\Message.aspx" />
     <Content Include="Config\Ajax.aspx" />
     <Content Include="Config\Config.aspx" />
+    <Content Include="Config\Update.aspx" />
     <Content Include="ContentPage.aspx" />
     <Content Include="Content\Add.aspx" />
     <Content Include="Content\Ajax.aspx" />
@@ -426,13 +425,6 @@
     <Content Include="Welcome\Default.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attribute\Attribute.aspx.cs">
-      <DependentUpon>Attribute.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Attribute\Attribute.aspx.designer.cs">
-      <DependentUpon>Attribute.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Channel\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -462,13 +454,6 @@
       <DependentUpon>Update.aspx</DependentUpon>
     </Compile>
     <Compile Include="common\Common.cs" />
-    <Compile Include="common\ImageUploader.ascx.cs">
-      <DependentUpon>ImageUploader.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="common\ImageUploader.ascx.designer.cs">
-      <DependentUpon>ImageUploader.ascx</DependentUpon>
-    </Compile>
     <Compile Include="common\Message.aspx.cs">
       <DependentUpon>Message.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -489,6 +474,13 @@
     </Compile>
     <Compile Include="Config\Config.aspx.designer.cs">
       <DependentUpon>Config.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
     </Compile>
     <Compile Include="Content.Master.cs">
       <DependentUpon>Content.Master</DependentUpon>
@@ -670,6 +662,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Attribute\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
