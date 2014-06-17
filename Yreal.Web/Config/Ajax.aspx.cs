@@ -14,11 +14,11 @@ namespace Yreal.Web.Config
         protected void Page_Load(object sender, EventArgs e)
         {
             var act = Request.Form["act"];
+            var ctx = new DataContext();
 
             if (act == "edit")
             {
                 AjaxResult response = null;
-                var ctx = new DataContext();
 
                 var id = Request.Form["id"];
                 var txtCode = Request.Form["txtCode"];
@@ -40,7 +40,55 @@ namespace Yreal.Web.Config
                     return;
                 }
 
-                var dt = new Model.Config() { ID = Convert.ToInt32(id), Image = txtImage, Text = txtText, Url = url };
+                var admin = this.Session["LoginAdmin"] as Model.Admin;
+
+                var dt = new Model.Config()
+                             {
+                                 ID = Convert.ToInt32(id),
+                                 Image = txtImage,
+                                 Text = txtText,
+                                 Url = url,
+                                 ModifyBy = admin == null ? 0 : admin.ID,
+                                 ModifyDate = DateTime.Now
+                             };
+
+                ctx.BeginTransaction();
+                try
+                {
+                    var bll = new BLL.BLLBase();
+                    bll.Update(ctx, dt);
+
+                    ctx.CommitTransaction();
+
+                    response = new AjaxResult() { Success = 1, Message = "操作成功", Data = id };
+                }
+                catch (Exception exception)
+                {
+                    ctx.RollBackTransaction();
+                    response = new AjaxResult() { Success = 0, Message = "操作失败：" + exception.Message, Data = 0 };
+                }
+                finally
+                {
+                    ctx.CloseConnection();
+                }
+
+                this.Response.Write(response);
+            }
+            else if(act=="stop")
+            {
+                AjaxResult response = null;
+
+                var id = Request.Form["id"];
+                var state = Request.Form["state"];
+
+                var admin = this.Session["LoginAdmin"] as Model.Admin;
+                var dt = new Model.Config()
+                             {
+                                 ID = Convert.ToInt32(id),
+                                 State = state == "0" ? 1 : 0,
+                                 ModifyBy = admin == null ? 0 : admin.ID,
+                                 ModifyDate = DateTime.Now
+                             };
 
                 ctx.BeginTransaction();
                 try

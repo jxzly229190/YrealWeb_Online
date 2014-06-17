@@ -30,7 +30,8 @@ namespace BLL
 
          public List<Model.Config> GetConfigs(Common.DataContext ctx)
          {
-             var tb = this.Select(ctx, new Model.Config() {State = 0});
+             //var tb = this.Select(ctx, new Model.Config() {State = 0});
+             var tb = ctx.ExecuteDataTable("Select * From Config Where State<>255");
              if (tb != null && tb.Rows.Count > 0)
              {
                  return tb.ToList<Model.Config>().OrderBy(c => c.Code).ToList();

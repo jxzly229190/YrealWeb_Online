@@ -15,6 +15,7 @@
 					<th width="4%">代码</th>
                     <th width="10%">封面/文字</th>
                     <th width="8%">URL</th>
+                    <th width="8%">状态</th>
                     <th width="4%">创建时间</th>
 					<th width="4%">操作</th>
 				</tr>
@@ -29,9 +30,11 @@
                                  ? "<img width='10%' height='10%' src='" + Eval("image") + "' /><span>"+PubFunc.RemoveHtml(HttpUtility.UrlDecode(Eval("Text").ToString())).Replace("%","")+"</span>"
                                                                           : "<span>" + PubFunc.RemoveHtml(HttpUtility.UrlDecode(Eval("Text").ToString())).Replace("%", "") + "</span>"%></td>
                     <td align="center"><%# Eval("Url")%></td>
+                    <td align="center"><%# Eval("State").ToString()=="0"?"正常":"停用"%></td>
                     <td align="center"><%# Eval("CreateDate")%></td>
 					<td align="center">
                         <a href='Update.aspx?id=<%# Eval("ID") %>'>编辑</a>
+                        <a href='javascript:change(<%# Eval("ID") %>,<%# Eval("State") %>);'><%#Eval("State").ToString()=="0"?"停用":"启用"%></a>
                     </td>
 				</tr>
             </ItemTemplate>
@@ -48,17 +51,17 @@
 </form>
 
 <script type="text/javascript">
-    function Del(id) {
-        if (confirm("您确定要删除吗？")) {
+    function change(id,state) {
+        if (confirm("您确定要切换状态吗？")) {
             $.ajax({
                 type: 'POST',
                 url: 'Ajax.aspx',
-                data: { id: id, act: "del" },
+                data: { id: id, act: "stop",state:state },
                 success: function (data) {
                     var json = eval(data)[0];
                     if (json.Success == 1) {
-                        $("#tr_" + id).remove();
                         alert("操作完成！");
+                        location.reload();
                     } else {
                         alert(json.Message);
                     }
