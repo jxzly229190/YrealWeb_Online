@@ -88,26 +88,5 @@
         }
     }
 
-    function Reset(id) {
-        if (confirm("您确定要重置密码吗？")) {
-            $.ajax({
-                type: 'POST',
-                url: 'Ajax.aspx',
-                data: { id: id, act: "reset" },
-                success: function (data) {
-                    var json = eval(data)[0];
-                    if (json.Success == 1) {
-                        alert("操作完成！");
-                    } else {
-                        alert(json.Message);
-                    }
-                },
-                error: function () {
-                    alert("操作失敗");
-                }
-            });
-        }
-    }
-
 </script>
 </asp:Content>

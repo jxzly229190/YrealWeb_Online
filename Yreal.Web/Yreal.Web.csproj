@@ -76,6 +76,8 @@
     <Content Include="Channel\Update.aspx" />
     <Content Include="common\ImageUploader.ascx" />
     <Content Include="common\Message.aspx" />
+    <Content Include="Config\Ajax.aspx" />
+    <Content Include="Config\Config.aspx" />
     <Content Include="ContentPage.aspx" />
     <Content Include="Content\Add.aspx" />
     <Content Include="Content\Ajax.aspx" />
@@ -473,6 +475,20 @@
     </Compile>
     <Compile Include="common\Message.aspx.designer.cs">
       <DependentUpon>Message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\Ajax.aspx.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\Ajax.aspx.designer.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\Config.aspx.cs">
+      <DependentUpon>Config.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\Config.aspx.designer.cs">
+      <DependentUpon>Config.aspx</DependentUpon>
     </Compile>
     <Compile Include="Content.Master.cs">
       <DependentUpon>Content.Master</DependentUpon>

@@ -39,6 +39,7 @@
   <ItemGroup>
     <Compile Include="BLLBase.cs" />
     <Compile Include="Channel.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="Content.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
