@@ -51,10 +51,11 @@
                         <tr>
                         <td align="right" width="8%">说明：</td>
                     <td width="92%">
-                        <% if (config.Code == "Product")
+                        <% 
+                            if (config.Code == "Product")
                            {
                                var txts= new string[3];
-                               if (string.IsNullOrEmpty(config.Text))
+                               if (!string.IsNullOrEmpty(config.Text))
                                {
                                    txts = config.Text.Split('|');
                                }
