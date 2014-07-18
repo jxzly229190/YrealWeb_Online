@@ -16,13 +16,13 @@ namespace Yreal.Web.Channel
         {
             if (!IsPostBack)
             {
-
                 var bll = new BLL.BLLBase();
                 var chtb = bll.Select(ctx, new Channel() { ID = Convert.ToInt32(Request.QueryString["id"]), State = 0 });
 
                 if (chtb != null && chtb.Rows.Count > 0)
                 {
                     channel = chtb.ToList<Model.Channel>()[0];
+                    img_1.ImgUrls = channel.ImageUrl;     
                     var tb =
                         ctx.ExecuteDataTable(
                             "Select * From Channel where State<>255 and ParentId=0 and [Type] in (1,2)");
@@ -34,7 +34,6 @@ namespace Yreal.Web.Channel
                         var channels = tb.ToList<Model.Channel>();
                         foreach (var pchannel in channels)
                         {
-
                             var item = new ListItem(pchannel.Name, pchannel.ID.ToString());
                             item.Attributes.Add("type", pchannel.Type.ToString());
                             ddlParentId.Items.Add(item);
@@ -63,7 +62,9 @@ namespace Yreal.Web.Channel
                 var txtState = Request.Form["sltState"];
                 var txtRemark = Request.Form["txtRemark"];
                 var txtSort = Request.Form["txtSort"];
-                var imageUrl = Request.Form["txtImage"];
+                var imageUrl = !string.IsNullOrEmpty(Request.Form["hifShowImage"])
+                                   ? common.Common.UploadImagePath + Request.Form["hifShowImage"]
+                                   : "";
 
                 if (string.IsNullOrEmpty(txtCode))
                 {

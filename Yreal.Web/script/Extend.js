@@ -1,148 +1,148 @@
 jQuery.extend({
-    isPhone: function(str) {
+    isPhone: function (str) {
         if (typeof (str) != "string") return false;
         var p = /^(\d{3}-)(\d{8})$|(\d{4}-)(\d{7})$|(\d{3})(\d{8})$|(\d{4})(\d{7})$/;
         return p.test($.trim(str));
     },
-    isInt: function(str) {
+    isInt: function (str) {
         if (typeof (str) != "string") return false;
         str = $.trim(str);
         var p = /^[-\+]?\d+$/;
         return p.test(str);
     },
-    isIntNotSymbol: function(str) {// 无符号正整数,1到9的数字。
+    isIntNotSymbol: function (str) {// 无符号正整数,1到9的数字。
         if (typeof (str) != "string") return false;
         str = $.trim(str);
         var p = /^[1-9]?[0-9]+$/;
         return p.test(str);
     },
-    len: function(str) {
+    len: function (str) {
         str = str.replace(" ", "");
         return str.length;
     },
-    isEmail: function(str) {
+    isEmail: function (str) {
         var reg = /^(([0-9a-zA-Z_.]+)|([0-9a-zA-Z]+[_.0-9a-zA-Z-]*[0-9a-zA-Z_.]+))@([a-zA-Z0-9-]+[.])+([a-zA-Z]{2}|net|NET|com|COM|gov|GOV|mil|MIL|org|ORG|edu|EDU|INT)$/;
         return reg.test($.trim(str));
 
     },
-    isCharAndNumber: function(str) {
+    isCharAndNumber: function (str) {
         if (typeof (str) != "string") return false;
         var p = /^\w+$/;
         return p.test($.trim(str));
     },
 
-    isHaveNum: function(str) {
+    isHaveNum: function (str) {
         if (typeof (str) != "string") return false;
         var p = /\d+/;
         return p.test($.trim(str));
     },
-    isHaveLetter: function(str) {
+    isHaveLetter: function (str) {
         if (typeof (str) != "string") return false;
         var p = /[a-zA-Z]+/;
         return p.test($.trim(str));
     },
-    isSpecial: function(str) {
+    isSpecial: function (str) {
         if (typeof (str) != "string") return false;
         var p = /[_\W]+/;
         return p.test($.trim(str));
     },
 
-    isCharAndNumberOrPoint: function(str) {
+    isCharAndNumberOrPoint: function (str) {
         if (typeof (str) != "string") return false;
         var p = /^[\w\.]+$/;
         return p.test($.trim(str));
     },
-    isChinese: function(str) {
-        if (typeof (str) != "string") return false; l
+    isChinese: function (str) {
+        if (typeof (str) != "string") return false;
         str = $.trim(str);
         var reg = /[u00-uFF]/;
         return !reg.test(str);
     },
-    isChineseAndChar: function(str) {
+    isChineseAndChar: function (str) {
         if (typeof (str) != "string") return false;
         str = $.trim(str);
         var reg = /^[-\w\u4E00-\u9FA5]+$/;
         return reg.test(str);
     },
-    isMobile: function(str) {
+    isMobile: function (str) {
         str = str.trim();
         //var reg = /^[1-9][0-9]{10}$/;
         var reg = /^[0,1][0-9]{9,10}$/;
         return reg.test(str);
     },
 
-    isSeriate: function(str) {
+    isSeriate: function (str) {
         str = str.trim();
-        var reg = /^[1-9][0-9]{10}$/;
         var reg = /([\s\S])\1{3,}/;
         return reg.test(str);
 
     },
-    isPassword: function(str) {
+    isPassword: function (str) {
         if (typeof (str) != "string") return false;
         var p = /^\w{6,16}$/;
         return p.test($.trim(str));
     },
-    isEmpty: function() {
-        for (var i = 0, j = arguments.length; i < j; i++) {
-            var str = $.trim(arguments[i]);
-            if (0 == str.length) return true;
+    isEmpty: function (str1) {
+        if (str1 && str1.length > 0) {
+            return false;
+        } else {
+            return true;
         }
     },
-    isUrl: function(str) {
+    isUrl: function (str) {
         var patrn = /^(http(s)?:\/\/)?([\w-]+\.)+[\w-]+(\/[\w-_, .\/?%&=]*)?$/;
 
         if (!patrn.exec($.trim(str)))
-            return false
+            return false;
         return true;
     },
-    isUrls: function(str) {
+    isUrls: function (str) {
         var patrn = new RegExp("((?:http|https|ftp|mms|rtsp)://(&(?=amp;)|[A-Za-z0-9\./=\?%_~@&#:;\+\-])+)", "ig");
         if (!patrn.exec($.trim(str)))
-            return false
+            return false;
         return true;
     },
-    isAllNumber: function(str) {
+    isAllNumber: function (str) {
         str = str.trim();
         var reg = /^\d+$/g;
         return reg.test(str);
     },
-    isMoney: function(str) {
+    isMoney: function (str) {
         str = str.trim();
         var reg = /^\d{1,9}(\.\d{1,2})?$/;
         return reg.test(str);
     },
-    isDecimal: function(str) {
+    isDecimal: function (str) {
         str = str.trim();
         var reg = /^([1-9]|[1-9]|(0[.])|(-(0[.])))[0-9]{0,}(([.]*\d{1,2})|[0-9]{0,})$/;
         return reg.test(str);
     },
-    isUserName: function(str) {
+    isUserName: function (str) {
         str = str.trim();
         var reg = /^[\w\u4E00-\u9FA5]{4,30}$/;
         return reg.test(str);
     },
-    isQQ: function(str) {
+    isQQ: function (str) {
         str = str.trim();
         var reg = /^[1-9][0-9]{4,11}$/;
         return reg.test(str);
     },
-    isZipcode: function(str) {
+    isZipcode: function (str) {
         str = str.trim();
         var reg = /^[1-9][0-9]{5}$/;
         return reg.test(str);
     },
-    isCard: function(str) {
+    isCard: function (str) {
         str = str.trim();
         var reg = /^[1-9](\d{13}|\d{16})[0-9|xX]$/;
         return reg.test(str);
     },
-    isScriptOrIframe: function(str) {
+    isScriptOrIframe: function (str) {
         str = str.trim();
         var reg = /^.*<\/?(script|iframe)(\s{1}.*)?>.*$/gi;
         return str.match(reg) == null ? false : true;
     },
-    isLink: function(str) {
+    isLink: function (str) {
         str = str.trim();
         var reg = /^.*<a.+href=.+>.*$/gi;
         return str.match(reg) == null ? false : true;
@@ -169,36 +169,36 @@ jQuery.fn.extend({
 
 String.prototype.trim = function() {
     return this.replace(/(^\str*)|(\str*$)/g, "");
-}
+};
 
 String.prototype.getRealLength = function() {
     return this.replace(/[^x00-xff]/g, "--").length;
-}
+};
 String.prototype.isAllNumber = function() {
     var str = this.replace(/^\d+$/g, "");
     str = str.trim();
     return 0 == str.length;
-}
+};
 String.prototype.toInt = function() {
     return parseInt(this);
-}
+};
 String.prototype.toFloat = function() {
     return parseFloat(this);
-}
+};
 
 String.prototype.clean = function() {
     return this.replace(/\s+/g, ' ').trim();
-}
+};
 
 String.prototype.isAllChar = function() {
     var str = this.replace(/[a-zA-Z]/g, "");
     str = str.trim();
     return 0 == str.length;
-}
+};
 String.prototype.len = function() {
     var str = this.replace(" ", "");
     return str.length;
-}
+};
 
 
 function inputInt() {

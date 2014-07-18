@@ -63,7 +63,7 @@ namespace Yreal.Web.Uploade
             }
             catch (Exception e)
             {
-                state = "未知错误";
+                state = "未知错误:"+e.Message+"/"+e.InnerException;
                 URL = "";
             }
             return getUploadInfo();
@@ -97,7 +97,7 @@ namespace Yreal.Web.Uploade
             }
             catch (Exception e)
             {
-                state = "未知错误";
+                state = "未知错误:" + e.Message + "/" + e.InnerException;
                 URL = "";
             }
             finally

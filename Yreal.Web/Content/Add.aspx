@@ -1,10 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="Yreal.Web.Content.Add" %>
+<%@ Register Src="../Controls/ImageUploader.ascx" TagName="imgUp" TagPrefix="uc1" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceTitle" runat="server">
     新增内容
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link href="/UE/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
-    <script type="text/javascript" src="/UE/third-party/jquery.min10.js"></script>
+   <script type="text/javascript" src="/UE/third-party/jquery.min10.js"></script>
  
     <script src="../script/Extend.js" type="text/javascript"></script>
     <script src="../script/jquery.form.js" type="text/javascript"></script>
@@ -38,9 +39,7 @@
                 <tr  width="8%">
                     <td align="right">封面图片：</td>
                     <td  width="92%">
-                        <input type="hidden" id="txtImage"/>
-                        <iframe width="500" id="iframepage" height="50" frameborder="no" border="0" marginwidth="0" marginheight="0" src="imageUpload.aspx" onload="iFrameHeight()"></iframe>
-                        <input type="button" onclick="$('#iframepage').attr('src','imageUpload.aspx')" value="删除"/>
+                        <uc1:imgUp ID="img_1" runat="server" Count="1" GG_X="1000" GG_Y="290" />
                     </td>
                 </tr>
                 <tr>
@@ -78,19 +77,11 @@
             </table>
     </div>
 <script type="text/javascript">
-    function iFrameHeight() {
-        var ifm = document.getElementById("iframepage");
-        var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
-        if (ifm != null && subWeb != null) {
-            ifm.height = subWeb.body.scrollHeight;
-        }
-    }
-
     $(function () {
         var ue = UM.getEditor('container').setContent("");
 
         $("#btnSubmit").click(function () {
-            var image = document.getElementById('iframepage').contentDocument.getElementById("imageUrl");
+            var image = $("input[name=hifShowImage]").val();
 
             var title = $("#txtTitle").val();
             var channel = $("#ddlChannel").val();
@@ -120,7 +111,7 @@
                     "channel": channel,
                     "content": escape(content),
                     "recommend": $("#recommend").val(),
-                    "image": $(image).attr("src"),
+                    "image": image,
                     "remark": $("#txtRemark").val()
                 },
                 success: function (data) {

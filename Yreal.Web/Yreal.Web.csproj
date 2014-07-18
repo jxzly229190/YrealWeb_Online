@@ -111,6 +111,7 @@
     <Content Include="images\admin\user.gif" />
     <Content Include="images\admin\xia.png" />
     <Content Include="images\banner_1.jpg" />
+    <Content Include="Controls\ImageUploader.ascx" />
     <Content Include="kf\kefu_bg.png" />
     <Content Include="kf\kefu_icon.png" />
     <Content Include="Main.aspx" />
@@ -415,7 +416,14 @@
     <Content Include="Admin\Password.aspx" />
     <Content Include="Admin\Update.aspx" />
     <Content Include="Admin\Users.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Uploade\Test.aspx" />
+    <Content Include="Controls\uploadify-cancel.png" />
+    <Content Include="Controls\uploadify.swf" />
+    <Content Include="Controls\uploadimg.jpg" />
+    <Content Include="Controls\uploadxx.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -545,6 +553,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ImageUploader.ascx.cs">
+      <DependentUpon>ImageUploader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ImageUploader.ascx.designer.cs">
+      <DependentUpon>ImageUploader.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Index.Master.cs">
       <DependentUpon>Index.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -581,11 +596,21 @@
       <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
     <Compile Include="UE\net\Uploader.cs" />
+    <Compile Include="Controls\DelImage.ashx.cs">
+      <DependentUpon>DelImage.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Uploade\getContent.ashx.cs">
       <DependentUpon>getContent.ashx</DependentUpon>
     </Compile>
     <Compile Include="Uploade\imageUp.ashx.cs">
       <DependentUpon>imageUp.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Uploade\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Uploade\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
     <Compile Include="Uploade\Uploader.cs" />
     <Compile Include="Admin\AddUser.aspx.cs">
@@ -652,6 +677,10 @@
     <Compile Include="Admin\Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\uploadxx.aspx.cs">
+      <DependentUpon>uploadxx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Welcome\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -713,6 +742,7 @@
     <None Include="UE\third-party\mathquill\font\Symbola.woff" />
     <Content Include="Uploade\imageUp.ashx" />
     <Content Include="Uploade\getContent.ashx" />
+    <Content Include="Controls\DelImage.ashx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

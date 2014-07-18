@@ -45,7 +45,9 @@ namespace Yreal.Web.Channel
                 var txtState = Request.Form["sltState"];
                 var txtRemark = Request.Form["txtRemark"];
                 var txtSort = Request.Form["txtSort"];
-                var imageUrl = Request.Form["txtImage"];
+                var imageUrl = !string.IsNullOrEmpty(Request.Form["hifShowImage"])
+                                   ? common.Common.UploadImagePath + Request.Form["hifShowImage"]
+                                   : "";
 
                 if (string.IsNullOrEmpty(txtCode))
                 {
