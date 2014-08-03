@@ -182,6 +182,7 @@ H1 a {
         <ul class="MM">
              <ul class="MM">
           <li><a href="Config/Config.aspx" target="main">首页配置</a></li>
+          <li><a href="Config/GlobeConfig.aspx" target="main">网站配置</a></li>
         </ul>
         </ul>
       </div>

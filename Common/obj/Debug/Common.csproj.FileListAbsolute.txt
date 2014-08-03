@@ -26,3 +26,10 @@ E:\SourceCode\YrealWeb_Online\Common\bin\Debug\IModel.pdb
 E:\SourceCode\YrealWeb_Online\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 E:\SourceCode\YrealWeb_Online\Common\obj\Debug\Common.dll
 E:\SourceCode\YrealWeb_Online\Common\obj\Debug\Common.pdb
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\Common\bin\Debug\Common.dll
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\Common\bin\Debug\Common.pdb
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\Common\bin\Debug\IModel.dll
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\Common\bin\Debug\IModel.pdb
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\Common\obj\Debug\Common.dll
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\Common\obj\Debug\Common.pdb

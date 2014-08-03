@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Common;
+using Model;
 
 namespace Yreal.Web
 {
@@ -17,6 +18,8 @@ namespace Yreal.Web
         protected List<Model.Channel> subChannels = null;
 
         protected List<Model.Content> Contents = null;
+
+        protected Model.GlobeConfig Config = null;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -32,6 +35,8 @@ namespace Yreal.Web
 
             var ctx = new DataContext();
             var bll = new BLL.BLLBase();
+
+            Config = bll.Select(ctx, new GlobeConfig() {Code = "SiteName"}).ToList<Model.GlobeConfig>()[0];
 
             var channelTB = bll.Select(ctx, new Model.Channel() { ID = Convert.ToInt32(id), State = 0 });
             if (channelTB != null && channelTB.Rows.Count > 0)

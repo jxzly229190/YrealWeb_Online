@@ -76,6 +76,9 @@
     <Content Include="common\Message.aspx" />
     <Content Include="Config\Ajax.aspx" />
     <Content Include="Config\Config.aspx" />
+    <Content Include="Config\Foot.aspx" />
+    <Content Include="Config\GlobeConfig.aspx" />
+    <Content Include="Config\globeUpdate.aspx" />
     <Content Include="Config\Update.aspx" />
     <Content Include="ContentPage.aspx" />
     <Content Include="Content\Add.aspx" />
@@ -482,6 +485,27 @@
     </Compile>
     <Compile Include="Config\Config.aspx.designer.cs">
       <DependentUpon>Config.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\Foot.aspx.cs">
+      <DependentUpon>Foot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\Foot.aspx.designer.cs">
+      <DependentUpon>Foot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\GlobeConfig.aspx.cs">
+      <DependentUpon>GlobeConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\GlobeConfig.aspx.designer.cs">
+      <DependentUpon>GlobeConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\globeUpdate.aspx.cs">
+      <DependentUpon>globeUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\globeUpdate.aspx.designer.cs">
+      <DependentUpon>globeUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Config\Update.aspx.cs">
       <DependentUpon>Update.aspx</DependentUpon>

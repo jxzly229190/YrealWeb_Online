@@ -40,7 +40,7 @@ body {
                         </div></td>
       </tr>
     </table></td>
-    <td width="16" valign="top"   background="../images/mail_rightbg.gif"><img  src="../images/nav-right-bg.gif" width="16" height="29" /></td>
+    <td width="16" valign="top" background="../images/mail_rightbg.gif"><img  src="../images/nav-right-bg.gif" width="16" height="29" /></td>
   </tr>
   <tr>
     <td valign="middle" background="../images/mail_leftbg.gif">&nbsp;</td>

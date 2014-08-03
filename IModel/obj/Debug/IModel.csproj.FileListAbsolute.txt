@@ -10,3 +10,7 @@ E:\SourceCode\YrealWeb_Online\IModel\bin\Debug\IModel.dll
 E:\SourceCode\YrealWeb_Online\IModel\bin\Debug\IModel.pdb
 E:\SourceCode\YrealWeb_Online\IModel\obj\Debug\IModel.dll
 E:\SourceCode\YrealWeb_Online\IModel\obj\Debug\IModel.pdb
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\IModel\bin\Debug\IModel.dll
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\IModel\bin\Debug\IModel.pdb
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\IModel\obj\Debug\IModel.dll
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\IModel\obj\Debug\IModel.pdb

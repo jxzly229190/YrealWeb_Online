@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainContent.master" AutoEventWireup="true" CodeBehind="ContentPage.aspx.cs" Inherits="Yreal.Web.ContentPage" %>
 <%@ Import Namespace="BLL" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <title>内容页面</title>
+    <title><%=Config.Description%><% =channel != null ? " "+channel.Name : "" %></title>
+    <meta name="keywords" content="<%=Config.Description %><% =channel != null ? ","+channel.Name : "" %>" />
+    <meta name="description" content="<%=Config.Description %><% =channel != null ? ","+channel.Name : "" %>" />
 </asp:Content>
 <asp:Content runat="server" ContentPlaceHolderID="ContentPlaceBreakNav">
     <a href="###"><%=channel.Name %></a>

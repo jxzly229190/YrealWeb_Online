@@ -20,3 +20,14 @@ E:\SourceCode\YrealWeb_Online\DAL\bin\Debug\IModel.pdb
 E:\SourceCode\YrealWeb_Online\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 E:\SourceCode\YrealWeb_Online\DAL\obj\Debug\DAL.dll
 E:\SourceCode\YrealWeb_Online\DAL\obj\Debug\DAL.pdb
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\DAL\bin\Debug\DAL.dll
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\DAL\bin\Debug\DAL.pdb
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\DAL\bin\Debug\Common.dll
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\DAL\bin\Debug\IModel.dll
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\DAL\bin\Debug\AspNetPager.dll
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\DAL\bin\Debug\SamuelControl.dll
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\DAL\bin\Debug\Common.pdb
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\DAL\bin\Debug\IModel.pdb
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\DAL\obj\Debug\DAL.dll
+E:\SourceCode\Git_YrealWeb\YrealWeb_Online\DAL\obj\Debug\DAL.pdb

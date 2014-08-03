@@ -52,21 +52,9 @@
 <!--页脚-->
 <div id="footer">
   <div class="wrapper">
-    <div class="contact"> <img src="./res/hotLine.gif">
-      <div class="content"> 版权所有：YReal软件开发有限公司<br>
-        地址：广东省东莞市高埗镇聪敏路31号美兰大厦2045<br>
-        电话：13889709992<br>
-        邮箱：jxzly@163.com<br>
-        投诉与建议：13889709992<br>
-        客服QQ：5685200 </div>
+    <div class="contact">
+        <%=Copyright%>
     </div>
-    <div id="mapBtn"><img src="./res/temp_0003.gif"> </div>
-    <div class="snsAndCopyright">
-      
-      <div class="c"></div>
-      <div id="copyright">版权所有 © 20014-2015  YrealSoft.Com </div>
-    </div>
-    <div id="qrCode"> <img src="./res/temp_0004.gif" width="100" height="100"> </div>
   </div>
   <script type="text/javascript">
       $(function () {
@@ -78,21 +66,10 @@
                   this.blur();
               };
           });
-          $('#qrCode img').hover(function () {
-              $(this).stop().animate({ width: '280px', height: '280px', left: '-120px', top: '-131px' }, 'fast', function () {
-                  $('#footer .corner').css('display', 'none'); // 这个无辜，就是影响了些二维码的形象
-              });
-          }, function () {
+          function () {
               $('#footer .corner').css('display', 'block');
               $(this).animate({ width: '100px', height: '100px', left: '15px', top: '15px' }, 'fast');
-          });
-          // 底部的地图
-          $('#mapBtn img').click(function () {
-              $('#map').fadeIn();
-          });
-          $('#map a').click(function () {
-              $('#map').fadeOut();
-          });
+          };
       });
 	</script>
   <link href="./res/backtop.css" type="text/css" rel="stylesheet" charset="utf-8">
