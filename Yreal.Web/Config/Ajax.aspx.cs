@@ -43,14 +43,14 @@ namespace Yreal.Web.Config
                 var admin = this.Session["LoginAdmin"] as Model.Admin;
 
                 var dt = new Model.Config()
-                             {
-                                 ID = Convert.ToInt32(id),
-                                 Image = txtImage,
-                                 Text = txtText,
-                                 Url = url,
-                                 ModifyBy = admin == null ? 0 : admin.ID,
-                                 ModifyDate = DateTime.Now
-                             };
+                {
+                    ID = Convert.ToInt32(id),
+                    Image = common.Common.UploadImagePath + txtImage.Replace(common.Common.UploadImagePath, ""),
+                    Text = txtText,
+                    Url = url,
+                    ModifyBy = admin == null ? 0 : admin.ID,
+                    ModifyDate = DateTime.Now
+                };
 
                 ctx.BeginTransaction();
                 try

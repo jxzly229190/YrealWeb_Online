@@ -82,13 +82,13 @@ namespace Yreal.Web.Content
 
                 var contentObj = new Model.Content()
                 {
-                    ID=Convert.ToInt16(id),
+                    ID = Convert.ToInt16(id),
                     Attributes = recommend,
                     ChannelCode = channelObj.Code,
                     ChannelName = channelObj.Name,
                     ChannelID = channelObj.ID,
                     ContentText = content,
-                    ImageUrls = image,
+                    ImageUrls = common.Common.UploadImagePath + image.Replace("common.Common.UploadImagePath", ""),
                     ModifiedBy = PubFunc.GetAdminID(),
                     ModifyDate = DateTime.Now,
                     Remark = remark,
@@ -171,7 +171,7 @@ namespace Yreal.Web.Content
                     ChannelName = channelObj.Name,
                     ChannelID = channelObj.ID,
                     ContentText = content,
-                    ImageUrls = image,
+                    ImageUrls = common.Common.UploadImagePath + image,
                     CreatedBy = PubFunc.GetAdminID(),
                     CreateDate = DateTime.Now,
                     ModifiedBy = PubFunc.GetAdminID(),

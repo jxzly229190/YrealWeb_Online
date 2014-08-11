@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="Update.aspx.cs" Inherits="Yreal.Web.Config.Update" %>
+<%@ Register TagPrefix="uc1" TagName="imgUp" Src="~/Controls/ImageUploader.ascx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceTitle" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -28,24 +29,22 @@
                     <tr>
                         <td align="right" width="8%">配图：</td>
                          <td  width="92%">
-                        <img src="<%=config.Image %>" id="img1"/>
-                        <iframe width="500" id="iframepage" height="50" frameborder="no" border="0" marginwidth="0" marginheight="0" src="../Content/imageUpload.aspx" onload="iFrameHeight()"></iframe>
-                        <span class="blue"><% 
-                                  if (config.Code == "Banner")
-                                 {%>
-                                     图片规格：1000px × 330px
-                                 <%}
+                             <uc1:imgUp Count="1" GG_X="1000" GG_Y="290" runat="server" ID="img_1"/>
+                            <span class="blue"><% 
+                                      if (config.Code == "Banner")
+                                     {%>
+                                         图片规格：1000px × 330px
+                                     <%}
                                    
-                                 if(config.Code == "Logo")
-                                 {%>
-                                     图片规格：210px × 86px
-                                 <%}
+                                     if(config.Code == "Logo")
+                                     {%>
+                                         图片规格：210px × 86px
+                                     <%}
                                    
-                                 if(config.Code == "Product")
-                                 {%>
-                                     图片规格：110px × 110px
-                                 <%}%></span>
-                        <input type="button" onclick="$('#iframepage').attr('src','/Content/imageUpload.aspx');$('#img1').attr('src','');$('#txtImage').val('');" value="删除"/>
+                                     if(config.Code == "Product")
+                                     {%>
+                                         图片规格：110px × 110px
+                                     <%}%></span>
                     </td>
                     </tr>
                         <tr>
@@ -88,22 +87,16 @@
                 </table>
         </div>
         <script type="text/javascript">
-            function iFrameHeight() {
-                var ifm = document.getElementById("iframepage");
-                var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
-                if (ifm != null && subWeb != null) {
-                    ifm.height = subWeb.body.scrollHeight;
+            function isEmpty(str1) {
+                if (str1 && str1.length > 0) {
+                    return false;
+                } else {
+                    return true;
                 }
             }
-            
-            $("#btnSubmit").click(function () {
-                var txtImage = document.getElementById('iframepage').contentDocument.getElementById("imageUrl");
 
-                if (txtImage) {
-                    txtImage = $(txtImage).attr("src");
-                } else {
-                    txtImage = $("#img1").attr("src");
-                }
+            $("#btnSubmit").click(function () {
+                var txtImage = $("input[name=hifShowImage]").val();
 
                 var txtCode = $("#txtCode").val();
                 var txtUrl = $("#txtUrl").val();
@@ -115,40 +108,40 @@
                     txtText = txtText.val();
                 }
 
-                if (txtCode=="About"&&$.isEmpty(txtText)) {
-                alert("说明不能为空");
-                return;
-            }
-                
-            if ((txtCode=="Banner"||txtCode=="Logo")&&$.isEmpty(txtImage)) {
-                alert("图片不能为空");
-                return;
-            }
-
-            $.ajax({ type: "post",
-                url: "Ajax.aspx",
-                dataType: "text",
-                data: {
-                    "id":<%= config.ID %>,
-                    "act": "edit",
-                    "txtCode": txtCode,
-                    "txtText": txtText,
-                    "txtImage": txtImage,
-                    "txtUrl": txtUrl
-                },
-                success: function (data) {
-                    //返回提示信息 
-                    var json = eval(data)[0];
-
-                    if (json.Success == 1) {
-                        alert("提交成功");
-                        window.location = "Config.aspx";
-                    } else {
-                        alert(json.Message);
-                    }
+                if (txtCode=="About"&&isEmpty(txtText)) {
+                    alert("说明不能为空");
+                    return;
                 }
+                
+                if ((txtCode=="Banner"||txtCode=="Logo")&&isEmpty(txtImage)) {
+                    alert("图片不能为空");
+                    return;
+                }
+
+                $.ajax({ type: "post",
+                    url: "Ajax.aspx",
+                    dataType: "text",
+                    data: {
+                        "id":<%= config.ID %>,
+                        "act": "edit",
+                        "txtCode": txtCode,
+                        "txtText": txtText,
+                        "txtImage": txtImage,
+                        "txtUrl": txtUrl
+                    },
+                    success: function (data) {
+                        //返回提示信息 
+                        var json = eval(data)[0];
+
+                        if (json.Success == 1) {
+                            alert("提交成功");
+                            window.location = "Config.aspx";
+                        } else {
+                            alert(json.Message);
+                        }
+                    }
+                });
             });
-        });
         </script>
         </form>
 </asp:Content>

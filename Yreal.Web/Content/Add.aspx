@@ -77,6 +77,14 @@
             </table>
     </div>
 <script type="text/javascript">
+   function isEmpty(str1) {
+        if (str1 && str1.length > 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     $(function () {
         var ue = UM.getEditor('container').setContent("");
 
@@ -87,17 +95,17 @@
             var channel = $("#ddlChannel").val();
             var content = UM.getEditor('container').getContent();
 
-            if ($.isEmpty(title)) {
+            if (isEmpty(title)) {
                 alert("标题不能为空");
                 return;
             }
 
-            if ($.isEmpty(channel) || channel == "0") {
+            if (isEmpty(channel) || channel == "0") {
                 alert("请选择栏目");
                 return;
             }
 
-            if ($.isEmpty(content)) {
+            if (isEmpty(content)) {
                 alert("内容不能为空");
                 return;
             }

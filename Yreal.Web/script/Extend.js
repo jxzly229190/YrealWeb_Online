@@ -1,4 +1,4 @@
-jQuery.extend({
+jQuery.fn.extend({
     isPhone: function (str) {
         if (typeof (str) != "string") return false;
         var p = /^(\d{3}-)(\d{8})$|(\d{4}-)(\d{7})$|(\d{3})(\d{8})$|(\d{4})(\d{7})$/;

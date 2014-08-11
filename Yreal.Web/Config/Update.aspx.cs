@@ -33,6 +33,8 @@ namespace Yreal.Web.Config
                 {
                     config = new Model.Config();
                 }
+
+                img_1.ImgUrls = config.Url;
             }
         }
     }

@@ -22,6 +22,7 @@ namespace Yreal.Web.Content
                 {
                     Content = dt.ToList<Model.Content>()[0];
                 }
+                img_1.ImgUrls = Content.ImageUrls;
 
                 //加载栏目
                 var bllChannels = new BLL.Channel();
