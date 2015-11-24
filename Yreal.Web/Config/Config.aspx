@@ -26,8 +26,8 @@
                 <tr id="tr_<%# Eval("ID")%>">
                     <td align="left"><%# Eval("Name")%></td>
 					<td align="left"><%# Eval("Code")%></td>
-					<td align="left"><%# !string.IsNullOrEmpty(Convert.ToString(Eval("image")))
-                                 ? "<img width='10%' height='10%' src='" + Eval("image") + "' /><span>"+PubFunc.RemoveHtml(HttpUtility.UrlDecode(Eval("Text").ToString())).Replace("%","")+"</span>"
+					<td align="left"><%# !string.IsNullOrEmpty(Convert.ToString(Eval("Image")))
+                                 ? "<img width='10%' height='10%' src='" + Eval("Image") + "' /><span>"+PubFunc.RemoveHtml(HttpUtility.UrlDecode(Eval("Text").ToString())).Replace("%","")+"</span>"
                                                                           : "<span>" + PubFunc.RemoveHtml(HttpUtility.UrlDecode(Eval("Text").ToString())).Replace("%", "") + "</span>"%></td>
                     <td align="center"><%# Eval("Url")%></td>
                     <td align="center"><%# Eval("State").ToString()=="0"?"正常":"停用"%></td>
